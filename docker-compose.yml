@@ -1,22 +1,30 @@
-version: '3'
+version: "3"
 
 services:
   app: &app
     container_name: app
     build: .
-    command: ["/bin/sh", "-c", "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"]
+    command:
+      [
+        "/bin/sh",
+        "-c",
+        "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'",
+      ]
     ports:
       - 3000:3000
     volumes:
       - .:/usr/src/app:delegated
     depends_on:
       - db
+      - webpacker
     stdin_open: true
     tty: true
     environment:
       - LANG=C.UTF-8
       - BUNDLE_PATH=vendor/bundle
       - RAILS_ENV=development
+      - WEBPACKER_DEV_SERVER_HOST=webpacker
+      - WEBPACKER_DEV_SERVER_PUBLIC=webpacker:3035
     env_file: ./.env
     working_dir: /usr/src/app
   db:
@@ -34,6 +42,17 @@ services:
     image: busybox
     volumes:
       - db:/var/lib/postgresql/data:delegated
+  webpacker:
+    <<: *app
+    container_name: webpacker
+    ports:
+      - 3035:3035
+    command:
+      ["sh", "-c", "rm -rf public/packs/* || true && bin/webpack-dev-server"]
+    depends_on: []
+    environment:
+      WEBPACKER_DEV_SERVER_HOST: 0.0.0.0
+      WEBPACKER_DEV_SERVER_PUBLIC: 0.0.0.0:3035
 
 volumes:
   db:

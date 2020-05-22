@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "@babel/preset-typescript": "^7.9.0",
+    "@rails/webpacker": "5.1.1",
+    "babel-preset-typescript-vue": "^1.1.1",
+    "typescript": "^3.9.3",
+    "vue": "^2.6.11",
+    "vue-loader": "^15.9.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.11.0"
+  }
+}

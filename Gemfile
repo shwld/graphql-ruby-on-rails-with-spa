@@ -18,6 +18,7 @@ gem 'seed-fu'
 gem 'sentry-raven'
 gem 'slim-rails'
 gem 'sidekiq'
+gem 'webpacker'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
