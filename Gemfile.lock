@@ -136,7 +136,6 @@ GEM
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
-    pagy (3.8.1)
     pg (1.2.3)
     promise.rb (0.7.4)
     pry (0.13.1)
@@ -213,7 +212,6 @@ GEM
       rspec-mocks (~> 3.9)
       rspec-support (~> 3.9)
     rspec-support (3.9.3)
-    rufo (0.7.0)
     seed-fu (2.3.9)
       activerecord (>= 3.1)
       activesupport (>= 3.1)
@@ -286,7 +284,6 @@ DEPENDENCIES
   graphql-batch
   letter_opener
   listen (~> 3.2)
-  pagy
   pg (>= 0.18, < 2.0)
   pry-byebug
   pry-rails
@@ -294,7 +291,6 @@ DEPENDENCIES
   rails (~> 6.0.3, >= 6.0.3.1)
   rails-i18n (~> 6.0.0)
   rspec-rails
-  rufo (~> 0.7.0)
   seed-fu
   sentry-raven
   sidekiq
