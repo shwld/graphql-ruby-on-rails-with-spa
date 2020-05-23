@@ -2,12 +2,5 @@
   "git.ignoreLimitWarning": true,
   "ruby.useLanguageServer": true,
   "ruby.useBundler": true,
-  "ruby.intellisense": "rubyLocate",
-  "files.associations": {
-    "*.html.erb": "html"
-  },
-  "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
-  },
-  "editor.formatOnSave": true
+  "ruby.intellisense": "rubyLocate"
 }
