@@ -16,14 +16,3 @@ RUN ln -s /opt/yarn/bin/yarn /usr/local/bin/yarn \
 RUN useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
 
 WORKDIR /usr/src/app
-COPY Gemfile* ./
-RUN chown docker:docker -R .
-USER docker
-RUN bundle install --jobs 4
-
-USER root
-COPY . .
-RUN chown docker:docker -R .
-
-USER docker
-CMD ["/bin/sh", "-c", "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"]

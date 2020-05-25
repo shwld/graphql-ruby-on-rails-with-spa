@@ -14,6 +14,7 @@ services:
       - 3000:3000
     volumes:
       - .:/usr/src/app:delegated
+      - node_modules:/usr/src/app/node_modules
     depends_on:
       - db
       - webpacker
@@ -42,6 +43,7 @@ services:
     image: busybox
     volumes:
       - db:/var/lib/postgresql/data:delegated
+      - node_modules:/usr/src/app/node_modules
   webpacker:
     <<: *app
     container_name: webpacker
@@ -51,9 +53,14 @@ services:
       ["sh", "-c", "rm -rf public/packs/* || true && bin/webpack-dev-server"]
     depends_on: []
     environment:
+      LANG: C.UTF-8
+      BUNDLE_PATH: vendor/bundle
+      RAILS_ENV: development
       WEBPACKER_DEV_SERVER_HOST: 0.0.0.0
       WEBPACKER_DEV_SERVER_PUBLIC: 0.0.0.0:3035
 
 volumes:
   db:
+    driver: local
+  node_modules:
     driver: local

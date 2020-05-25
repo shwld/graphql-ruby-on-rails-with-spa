@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "rebornix.Ruby",
+    "vortizhe.simple-ruby-erb",
+    "bung87.rails",
+    "ninoseki.vscode-gem-lens",
+    "esbenp.prettier-vscode",
+    "apollographql.vscode-apollo"
+  ]
+}

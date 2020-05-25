@@ -5,15 +5,15 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import Vue from 'vue'
 
 export default Vue.extend({
-  data: function() {
+  data: function () {
     return {
-      message: "Hello Vue!"
-    };
+      message: 'Hello Vue!'
+    }
   }
-});
+})
 </script>
 
 <style scoped>

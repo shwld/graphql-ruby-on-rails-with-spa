@@ -1,0 +1,30 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint"
+  ],
+  "plugins": ["@typescript-eslint"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "env": { "browser": true, "node": true, "es6": true },
+  "rules": {
+    "@typescript-eslint/interface-name-prefix": false,
+    "@typescript-eslint/consistent-type-definitions": false,
+    "@typescript-eslint/explicit-member-accessibility": [true, "no-public"],
+    "no-console": 0,
+    "@typescript-eslint/no-floating-promises": false,
+    "sort-keys": 0,
+    "prettier": [
+      true,
+      {
+        "semi": false,
+        "singleQuote": true,
+        "trailingComma": "es5"
+      }
+    ]
+  }
+}
