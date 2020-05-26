@@ -14,7 +14,7 @@ docker-compose run --rm app yarn
 docker-compose run --rm app bundle install
 ```
 
-## VsCode
+## VSCode
 
 ```
 code --install-extension ms-vscode-remote.vscode-remote-extensionpack
