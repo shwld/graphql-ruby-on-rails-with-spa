@@ -10,6 +10,7 @@
     "apollo-cache-inmemory": "^1.6.6",
     "apollo-client": "^2.6.10",
     "apollo-link": "^1.2.14",
+    "apollo-link-context": "^1.0.20",
     "apollo-link-http": "^1.5.17",
     "babel-preset-typescript-vue": "^1.1.1",
     "graphql": "^15.0.0",
@@ -19,6 +20,7 @@
     "vue": "^2.6.11",
     "vue-apollo": "^3.0.3",
     "vue-loader": "^15.9.2",
+    "vue-router": "^3.2.0",
     "vue-template-compiler": "^2.6.11"
   },
   "devDependencies": {

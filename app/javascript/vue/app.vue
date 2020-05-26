@@ -1,6 +1,10 @@
 <template>
   <div id="app">
-    <p>{{ result.currentUser.email }}</p>
+    <p v-if="result">{{ result.currentUser.email }}</p>
+    <p v-else>
+      <a href="/users/sign_in">Sign in</a><br />
+      <a href="/users/sign_up">Sign up</a>
+    </p>
   </div>
 </template>
 
