@@ -14,19 +14,14 @@ jobs:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: password
         options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+    container:
+      image: ruby:2.7.1
+      env:
+        RAILS_ENV: test
+        DATABASE_URL: postgresql://postgres:password@postgres:5432/app_test?encoding=utf8&pool=5&timeout=5000
     steps:
       - uses: actions/checkout@v1
-      - name: Set up Ruby 2.7.1
-        uses: actions/setup-ruby@v1
-        with:
-          ruby-version: 2.7.1
-      - name: Install PostgreSQL client
-        run: |
-          sudo apt-get -yqq install libpq-dev dialog apt-utils
       - name: Build App
-        env:
-          RAILS_ENV: test
-          DATABASE_URL: postgresql://postgres:password@postgres:5432/postgres?encoding=utf8&pool=5&timeout=5000
         run: |
           gem install bundler
           bundle install --quiet --jobs 4 --retry 3
@@ -35,4 +30,4 @@ jobs:
           bin/rails db:create
           bin/rails db:schema:load
       - name: Run test
-        run: bin/rspec
+        run: rspec
