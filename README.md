@@ -1,5 +1,7 @@
 # graphql-ruby + devise + Single Page Application on Rails
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 ## Includes
 
 - Ruby on Rails
