@@ -4,12 +4,16 @@ import { apolloClient } from '@/graphql/apollo'
 import App from '@/vue/app.vue'
 import VueCompositionApi, { provide } from '@vue/composition-api'
 import { DefaultApolloClient } from '@vue/apollo-composable'
+import VueRouter from 'vue-router'
+import { routes } from '@/vue/routes'
 
-Vue.use(VueCompositionApi)
 Vue.use(VueApollo)
+Vue.use(VueCompositionApi)
+Vue.use(VueRouter)
 
-const apolloProvider = new VueApollo({
-  defaultClient: apolloClient
+const router = new VueRouter({
+  mode: 'history',
+  routes
 })
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -18,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
       provide(DefaultApolloClient, apolloClient)
       return {}
     },
-    apolloProvider,
+    router,
     render: (h) => h(App)
   }).$mount()
   document.body.appendChild(app.$el)

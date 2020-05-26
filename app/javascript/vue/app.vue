@@ -3,8 +3,10 @@
     <p v-if="result">{{ result.currentUser.email }}</p>
     <p v-else>
       <a href="/users/sign_in">Sign in</a><br />
-      <a href="/users/sign_up">Sign up</a>
+      <a href="/users/sign_up">Sign up</a><br />
     </p>
+    <router-link to="/my_profile/edit">Edit</router-link>
+    <router-view />
   </div>
 </template>
 
