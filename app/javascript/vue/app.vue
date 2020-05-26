@@ -1,17 +1,18 @@
 <template>
   <div id="app">
-    <p>{{ message }}</p>
+    <p>{{ result.currentUser.email }}</p>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import { defineComponent } from '@vue/composition-api'
+import { useCurrentUserQuery } from '@/graphql/types'
 
-export default Vue.extend({
-  data: function () {
-    return {
-      message: 'Hello Vue!'
-    }
+export default defineComponent({
+  setup() {
+    const { result } = useCurrentUserQuery()
+    return { result }
   }
 })
 </script>

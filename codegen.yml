@@ -1,0 +1,15 @@
+overwrite: true
+schema: "http://app:3000/schema"
+documents:
+  - ./app/javascript/graphql/**/*.graphql
+generates:
+  app/javascript/graphql/types.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-vue-apollo
+    config:
+      withCompositionFunctions: true
+  ./graphql.schema.json:
+    plugins:
+      - "introspection"

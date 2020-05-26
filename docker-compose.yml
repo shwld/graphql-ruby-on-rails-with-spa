@@ -44,6 +44,13 @@ services:
     volumes:
       - db:/var/lib/postgresql/data:delegated
       - node_modules:/usr/src/app/node_modules
+  generator:
+    <<: *app
+    container_name: generator
+    ports: []
+    command: ["sh", "-c", 'yarn generate --watch "app/javascript/graphql/**"']
+    depends_on:
+      - app
   webpacker:
     <<: *app
     container_name: webpacker

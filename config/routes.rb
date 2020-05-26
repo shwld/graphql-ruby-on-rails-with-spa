@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root to: 'view#show'
 
   if Rails.env.development?
+    post '/schema', to: 'graphql_schema#execute'
     get '/graphiql', to: 'graphiql#show'
   end
 end

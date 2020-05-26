@@ -8,5 +8,6 @@ class Types::Objects::UserType < Types::BaseObject
     nil
   end
 
+  field :id, ID, null: false
   field :email, String, null: true
 end
