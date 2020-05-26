@@ -3,6 +3,7 @@
 ## Includes
 
 - Ruby on Rails
+- graphql-ruby
 - Devise authentication
 - Single Page Application (Vue.js)
 
