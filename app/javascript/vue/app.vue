@@ -1,14 +1,24 @@
 <template>
   <div id="app">
     <template v-if="!loading">
-      <div v-if="result">
-        {{ result.currentUser.email }}<br />
-        <router-link to="/my_profile/edit">Edit</router-link>
-      </div>
-      <div v-else>
-        <a href="/users/sign_in">Sign in</a><br />
-        <a href="/users/sign_up">Sign up</a><br />
-      </div>
+      <ul v-if="result" class="flex items-center justify-end p-6 bg-teal-500">
+        <li>
+          <router-link
+            to="/my_profile/edit"
+            class="text-white hover:text-yellow-800"
+          >
+            {{ result.currentUser.email }}
+          </router-link>
+        </li>
+      </ul>
+      <ul v-else class="flex">
+        <li class="mr-6">
+          <a href="/users/sign_in">Sign in</a>
+        </li>
+        <li>
+          <a href="/users/sign_up">Sign up</a>
+        </li>
+      </ul>
     </template>
     <router-view />
   </div>
