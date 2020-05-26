@@ -1,24 +1,32 @@
-# README
+# graphql-ruby + devise + Single Page Application on Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Includes
 
-Things you may want to cover:
+- Ruby on Rails
+- Devise authentication
+- Single Page Application (Vue.js)
 
-* Ruby version
+## Install
 
-* System dependencies
+```
+docker-compose build
+docker-compose run --rm app yarn
+docker-compose run --rm app bundle install
+```
 
-* Configuration
+## VsCode
 
-* Database creation
+```
+code --install-extension ms-vscode-remote.vscode-remote-extensionpack
+```
 
-* Database initialization
+Open folder in container
 
-* How to run the test suite
+![remote development](./docs/vscode1.png)
 
-* Services (job queues, cache servers, search engines, etc.)
+## TODO
 
-* Deployment instructions
-
-* ...
+- [ ] Vue router with rails-routes rail
+- [ ] Client and serverside validation rail
+- [ ] Include heroku setting
+- [ ] Include github actions setting
