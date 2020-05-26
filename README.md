@@ -28,5 +28,3 @@ Open folder in container
 
 - [ ] Client and serverside validation rail
 - [ ] Include heroku setting
-- [ ] Install rspec
-- [ ] Include github actions setting
