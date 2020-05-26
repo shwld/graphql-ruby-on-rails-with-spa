@@ -26,7 +26,7 @@ Open folder in container
 
 ## TODO
 
-- [ ] Vue router with rails-routes rail
 - [ ] Client and serverside validation rail
 - [ ] Include heroku setting
+- [ ] Install rspec
 - [ ] Include github actions setting
