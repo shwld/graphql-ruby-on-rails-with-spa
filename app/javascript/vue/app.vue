@@ -2,7 +2,7 @@
   <div id="app">
     <template v-if="!loading">
       <ul v-if="result.currentUser" class="flex items-center justify-end p-6 bg-teal-500">
-        <li>
+        <li class="mr-6">
           <router-link
             to="/my_profile/edit"
             class="text-white hover:text-yellow-800"
