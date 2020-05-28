@@ -14,7 +14,6 @@ services:
       - 3000:3000
     volumes:
       - .:/usr/src/app:delegated
-      - node_modules:/usr/src/app/node_modules
     depends_on:
       - db
       - webpacker
@@ -43,7 +42,6 @@ services:
     image: busybox
     volumes:
       - db:/var/lib/postgresql/data:delegated
-      - node_modules:/usr/src/app/node_modules
   generator:
     <<: *app
     container_name: generator
@@ -68,6 +66,4 @@ services:
 
 volumes:
   db:
-    driver: local
-  node_modules:
     driver: local
