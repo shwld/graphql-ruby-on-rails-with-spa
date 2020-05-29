@@ -36,6 +36,6 @@
     "webpack-dev-server": "^3.11.0"
   },
   "scripts": {
-    "generate": "graphql-codegen --config --silent codegen.yml"
+    "generate": "graphql-codegen --config codegen.yml --silent"
   }
 }
