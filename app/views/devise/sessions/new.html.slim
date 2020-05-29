@@ -1,18 +1,16 @@
-h2
-  | Log in
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
-    br
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    br
-    = f.password_field :password, autocomplete: "current-password"
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "Log in"
-= render "devise/shared/links"
+.w-full.h-screen.flex.flex-col.items-center.justify-center
+  = form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4' }) do |f|
+    h2.2xl.font-bold.mb-5 Sign in
+    .mb-4
+      = f.label :email, class: 'block text-gray-700 text-sm font-bold mb-2'
+      = f.email_field :email, autofocus: true, autocomplete: 'email', class: 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+    .mb-4
+      = f.label :password, class: 'block text-gray-700 text-sm font-bold mb-2'
+      = f.password_field :password, autocomplete: "current-password", class: 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+    - if devise_mapping.rememberable?
+      .mb-4
+        = f.check_box :remember_me, class: 'mr-2 leading-tight'
+        = f.label :remember_me, class: 'text-sm'
+    .md:flex.md:items-center
+      = f.submit "Log in", class: 'shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded'
+  = render "devise/shared/links"

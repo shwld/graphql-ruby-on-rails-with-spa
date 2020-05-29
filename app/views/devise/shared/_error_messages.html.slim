@@ -1,7 +1,6 @@
 - if resource.errors.any?
-  #error_explanation
-    h2
-      = I18n.t("errors.messages.not_saved", count: resource.errors.count, resource: resource.class.model_name.human.downcase)
+  .text-red-500 = I18n.t("errors.messages.not_saved", count: resource.errors.count, resource: resource.class.model_name.human.downcase)
+  .bg-orange-100.border-l-4.border-orange-500.text-orange-700.p-4.mb-4
     ul
       - resource.errors.full_messages.each do |message|
         li

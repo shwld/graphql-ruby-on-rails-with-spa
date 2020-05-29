@@ -1,22 +1,20 @@
-h2
-  | Change your password
-= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  = f.hidden_field :reset_password_token
-  .field
-    = f.label :password, "New password"
-    br
-    - if @minimum_password_length
-      em
-        | (
-        = @minimum_password_length
-        |  characters minimum)
-      br
-    = f.password_field :password, autofocus: true, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation, "Confirm new password"
-    br
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = f.submit "Change my password"
-= render "devise/shared/links"
+.w-full.h-screen.flex.flex-col.items-center.justify-center
+  = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put, class: 'bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4' }) do |f|
+    h2.2xl.font-bold.mb-5 Change your password
+    = render "devise/shared/error_messages", resource: resource
+    = f.hidden_field :reset_password_token
+    .mb-4
+      = f.label :password, "New password", class: 'block text-gray-700 text-sm font-bold mb-2'
+      - if @minimum_password_length
+        em
+          | (
+          = @minimum_password_length
+          |  characters minimum)
+        br
+      = f.password_field :password, autofocus: true, autocomplete: "new-password", class: 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+    .mb-4
+      = f.label :password_confirmation, "Confirm new password", class: 'block text-gray-700 text-sm font-bold mb-2'
+      = f.password_field :password_confirmation, autocomplete: "new-password", class: 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+    .md:flex.md:items-center
+      = f.submit "Change my password", class: 'shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded'
+  = render "devise/shared/links"
