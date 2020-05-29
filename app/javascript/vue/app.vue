@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <template v-if="!loading">
-      <ul v-if="result" class="flex items-center justify-end p-6 bg-teal-500">
-        <li>
+      <ul v-if="result.currentUser" class="flex items-center justify-end p-6 bg-teal-500">
+        <li class="mr-6">
           <router-link
             to="/my_profile/edit"
             class="text-white hover:text-yellow-800"
@@ -10,8 +10,16 @@
             {{ result.currentUser.email }}
           </router-link>
         </li>
+        <li>
+          <a
+            href="/users/sign_out"
+            data-method="delete"
+          >
+            Sign out
+          </a>
+        </li>
       </ul>
-      <ul v-else class="flex">
+      <ul v-else class="flex items-center justify-end p-6 bg-teal-500">
         <li class="mr-6">
           <a href="/users/sign_in">Sign in</a>
         </li>
