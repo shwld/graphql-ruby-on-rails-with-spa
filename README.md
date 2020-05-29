@@ -31,3 +31,5 @@ Open folder in container
 
 - [ ] Client and serverside validation rail
 - [ ] Include heroku setting
+- [ ] object_from_id, id_from_id_object
+- [ ] use uuid for primary key
