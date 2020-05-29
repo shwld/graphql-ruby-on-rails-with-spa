@@ -1,13 +1,12 @@
-version: "3"
+version: '3'
 
 services:
   app: &app
-    container_name: app
     build: .
     command:
       [
-        "/bin/sh",
-        "-c",
+        '/bin/sh',
+        '-c',
         "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'",
       ]
     ports:
@@ -28,7 +27,6 @@ services:
     env_file: ./.env
     working_dir: /usr/src/app
   db:
-    container_name: db
     image: postgres:12
     environment:
       - POSTGRES_USER=postgres
@@ -38,24 +36,21 @@ services:
     ports:
       - 5432:5432
   data:
-    container_name: data
     image: busybox
     volumes:
       - db:/var/lib/postgresql/data:delegated
   generator:
     <<: *app
-    container_name: generator
     ports: []
-    command: ["sh", "-c", 'yarn generate --watch "app/javascript/graphql/**"']
+    command: ['sh', '-c', 'yarn generate --watch "app/javascript/graphql/**"']
     depends_on:
       - app
   webpacker:
     <<: *app
-    container_name: webpacker
     ports:
       - 3035:3035
     command:
-      ["sh", "-c", "rm -rf public/packs/* || true && bin/webpack-dev-server"]
+      ['sh', '-c', 'rm -rf public/packs/* || true && bin/webpack-dev-server']
     depends_on: []
     environment:
       LANG: C.UTF-8
