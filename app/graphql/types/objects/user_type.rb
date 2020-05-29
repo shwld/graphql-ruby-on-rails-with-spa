@@ -4,10 +4,6 @@ class Types::Objects::UserType < Types::BaseObject
     super and context[:user_signed_in] and context[:current_user].id == object.id
   end
 
-  def self.unauthorized_object(error)
-    nil
-  end
-
   field :id, ID, null: false
   field :email, String, null: true
 end
