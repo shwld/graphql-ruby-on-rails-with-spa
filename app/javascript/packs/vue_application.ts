@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueApollo from 'vue-apollo'
 import { apolloClient } from '@/graphql/apollo'
-import App from '@/vue/app.vue'
+import App from '@/vue/App.vue'
 import VueCompositionApi, { provide } from '@vue/composition-api'
 import { DefaultApolloClient } from '@vue/apollo-composable'
 import VueRouter from 'vue-router'

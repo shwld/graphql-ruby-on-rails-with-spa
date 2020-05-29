@@ -1,6 +1,7 @@
 <template>
   <div>
-    <p>This is edit page!</p>
+    <p>Protected</p>
+    <router-view />
   </div>
 </template>
 
@@ -11,8 +12,8 @@ import { useCurrentUserQuery } from '@/graphql/types'
 
 export default defineComponent({
   setup() {
-    const { result } = useCurrentUserQuery()
-    return { result }
+    const { result, loading } = useCurrentUserQuery()
+    return { result, loading }
   }
 })
 </script>

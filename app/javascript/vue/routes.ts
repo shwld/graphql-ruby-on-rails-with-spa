@@ -1,3 +1,10 @@
-import edit from './users/edit.vue'
+import Example from './Example.vue'
+import Protected from './Protected.vue'
 
-export const routes = [{ path: '/my_profile/edit', component: edit }]
+export const routes = [
+  {
+    path: '/protected',
+    component: Protected,
+    children: [{ path: 'example', component: Example }]
+  }
+]
