@@ -31,4 +31,3 @@ Open folder in container
 ## TODO
 
 - [ ] Client and serverside validation rail
-- [ ] Include heroku setting
