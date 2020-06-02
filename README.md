@@ -32,4 +32,3 @@ Open folder in container
 
 - [ ] Client and serverside validation rail
 - [ ] Include heroku setting
-- [ ] Sentry
