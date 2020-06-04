@@ -16,7 +16,7 @@
     "graphql": "^15.0.0",
     "graphql-tag": "^2.10.3",
     "tailwindcss": "^1.4.6",
-    "typescript": "^3.9.3",
+    "typescript": "^3.9.5",
     "vue": "^2.6.11",
     "vue-apollo": "^3.0.3",
     "vue-loader": "^15.9.2",
