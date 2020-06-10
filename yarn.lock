@@ -931,12 +931,12 @@
     "@graphql-toolkit/schema-merging" "~0.10.4"
     tslib "~2.0.0"
 
-"@graphql-codegen/introspection@1.14.0":
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/@graphql-codegen/introspection/-/introspection-1.14.0.tgz#b1c7a2cafc14345f4cd856a7fa205d165a5a765c"
-  integrity sha512-pL/ecNgxzW06ImF4hHRSbuqokmqM59wmyhtgdiWnpcJIlrldrKfnFIvTr0HGC3Lre1AforCXuZI659TCU56EXA==
+"@graphql-codegen/introspection@1.15.2":
+  version "1.15.2"
+  resolved "https://registry.yarnpkg.com/@graphql-codegen/introspection/-/introspection-1.15.2.tgz#d427b5433f69dfc86fa2a2fb7b4bfd2786ee241a"
+  integrity sha512-k2KC4f04sCqtjWrojLMXUuxJwfNa0GXI/SD0T7O8uc3oh+VbGJY1FoOKWoKo7Y5UMXLQ+jkTSbcS3qt0UJyvtg==
   dependencies:
-    "@graphql-codegen/plugin-helpers" "1.14.0"
+    "@graphql-codegen/plugin-helpers" "1.15.2"
     tslib "~2.0.0"
 
 "@graphql-codegen/plugin-helpers@1.14.0":
@@ -945,6 +945,22 @@
   integrity sha512-VV74wsEVrzsEXUREQi2ZetO+EkQWj2C+DzjxKmRiFak/RpCasoVPkO/DxspZsljyHi6htIGX5r9m5x8uhfphmg==
   dependencies:
     "@graphql-toolkit/common" "~0.10.4"
+    camel-case "4.1.1"
+    common-tags "1.8.0"
+    constant-case "3.0.3"
+    import-from "3.0.0"
+    lower-case "2.0.1"
+    param-case "3.0.3"
+    pascal-case "3.1.1"
+    tslib "~2.0.0"
+    upper-case "2.0.1"
+
+"@graphql-codegen/plugin-helpers@1.15.2":
+  version "1.15.2"
+  resolved "https://registry.yarnpkg.com/@graphql-codegen/plugin-helpers/-/plugin-helpers-1.15.2.tgz#102d93094858f10537911bd3c788f730f0f74974"
+  integrity sha512-5bvgNrLEtXj0tmyGj0I2JfxbjL1wkOKcjTubGDFfmbOR4aGOCCJPCgTtoCyCX8qbazW4LOsVInWieKEoEGUzYg==
+  dependencies:
+    "@graphql-tools/utils" "^6.0.0"
     camel-case "4.1.1"
     common-tags "1.8.0"
     constant-case "3.0.3"
@@ -1132,6 +1148,13 @@
     graphql-tools "5.0.0"
     tslib "1.11.2"
     valid-url "1.0.9"
+
+"@graphql-tools/utils@^6.0.0":
+  version "6.0.9"
+  resolved "https://registry.yarnpkg.com/@graphql-tools/utils/-/utils-6.0.9.tgz#135a56f6520a99a2bbbfaf7d76bd5f681d1ce457"
+  integrity sha512-WtX+t64SCN9VejKA/gdtm2sHPOX8D1G1tAyrrKH7hnh6RaCmQwYkhs/f6tBnTTYOIBy7yVYNoXzqiv/tmOkAOQ==
+  dependencies:
+    camel-case "4.1.1"
 
 "@kwsites/exec-p@^0.4.0":
   version "0.4.0"
