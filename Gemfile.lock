@@ -103,7 +103,7 @@ GEM
       romaji
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    graphql (1.10.10)
+    graphql (1.11.0)
     graphql-autotest (0.2.1)
       graphql
     graphql-batch (0.4.3)
