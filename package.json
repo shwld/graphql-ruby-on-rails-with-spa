@@ -14,6 +14,7 @@
     "apollo-link-http": "^1.5.17",
     "babel-preset-typescript-vue": "^1.1.1",
     "graphql": "^15.0.0",
+    "graphql-ruby-client": "^1.7.10",
     "graphql-tag": "^2.10.3",
     "tailwindcss": "^1.4.6",
     "typescript": "^3.9.3",
