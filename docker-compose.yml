@@ -16,6 +16,7 @@ services:
     depends_on:
       - db
       - webpacker
+      - redis
     stdin_open: true
     tty: true
     environment:
@@ -58,6 +59,10 @@ services:
       RAILS_ENV: development
       WEBPACKER_DEV_SERVER_HOST: 0.0.0.0
       WEBPACKER_DEV_SERVER_PUBLIC: 0.0.0.0:3035
+  redis:
+    image: redis
+    ports:
+      - 6379:6379
 
 volumes:
   db:

@@ -1,11 +1,12 @@
 class Subscriptions::Chat < Subscriptions::BaseSubscription
   field :messages, [String], null: false
+  # argument :message, String, required: true
 
   def subscribe
-    { messages: [] }
+    { messages: [ 'スタート' ] }
   end
 
   def update
-    { messages: [] }
+    { messages: [object[:message]] }
   end
 end
