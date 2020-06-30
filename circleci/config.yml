@@ -1,0 +1,74 @@
+version: 2
+jobs:
+  build:
+    parallelism: 2
+    docker:
+      - image: circleci/ruby:2.7.1-node
+        environment:
+          BUNDLE_JOBS: "3"
+          BUNDLE_RETRY: "3"
+          BUNDLE_PATH: vendor/bundle
+          DATABASE_URL: postgres://circleci-ruby:password@127.0.0.1
+          RAILS_ENV: test
+      - image: circleci/postgres:12-alpine
+        environment:
+          POSTGRES_USER: circleci-ruby
+          POSTGRES_DB: app_test
+          POSTGRES_PASSWORD: password
+    steps:
+      - checkout
+      - run:
+          name: Bundler
+          command: bundle -v
+
+      - restore_cache:
+          keys:
+            - rails-demo-bundle-v2-{{ checksum "Gemfile.lock" }}
+            - rails-demo-bundle-v2-
+
+      - run:
+          name: Bundle install
+          command: bundle check || bundle install
+
+      - save_cache:
+          key: rails-demo-bundle-v2-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+
+      - restore_cache:
+          keys:
+            - rails-demo-yarn-{{ checksum "yarn.lock" }}
+            - rails-demo-yarn-
+
+      - run:
+          name: Yarn Install
+          command: yarn install --cache-folder ~/.cache/yarn
+
+      - save_cache:
+          key: rails-demo-yarn-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+
+      - run:
+          name: DB
+          command: dockerize -wait tcp://localhost:5432 -timeout 1m
+
+      - run:
+          name: DB schema:load
+          command: bin/rails db:schema:load --trace
+
+      - run:
+          name: Db seed
+          command: bin/rails db:seed
+
+      - run:
+          name: Run RSpec
+          command: |
+            bundle exec rspec --profile 10 \
+                              --format RspecJunitFormatter \
+                              --out test_results/rspec.xml \
+                              --format progress \
+                              $(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)
+
+      - store_test_results:
+          path: test_results
