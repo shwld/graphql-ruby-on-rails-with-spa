@@ -99,7 +99,7 @@ GEM
     faraday (1.0.1)
       multipart-post (>= 1.2, < 3)
     ffi (1.12.2)
-    gimei (0.5.0)
+    gimei (0.5.1)
       romaji
     globalid (0.4.2)
       activesupport (>= 4.2.0)
