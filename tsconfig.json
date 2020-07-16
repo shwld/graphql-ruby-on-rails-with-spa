@@ -1,20 +1,23 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "declaration": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "lib": ["es6", "dom"],
-    "module": "es6",
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "jsx": "react",
+    "lib": ["esnext", "dom"],
+    "module": "esnext",
     "moduleResolution": "node",
-    "baseUrl": ".",
-    "paths": {
-      "*": ["node_modules/*", "app/javascript/*"],
-      "@/*": ["app/javascript/*"]
-    },
-    "sourceMap": true,
-    "target": "es5",
     "noEmit": true,
-    "types": ["vue-apollo"]
+    "paths": {
+      "*": ["./app/javascript/types/*"]
+    },
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es5"
   },
   "exclude": ["**/*.spec.ts", "node_modules", "vendor", "public"],
   "compileOnSave": false
