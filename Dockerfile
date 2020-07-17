@@ -5,6 +5,7 @@ RUN apt-get update -qq \
     && apt-get install -y --no-install-recommends \
                     build-essential \
                     ca-certificates \
+                    graphviz \
     && rm -rf /var/lib/apt/lists/*
 
 COPY --from=node /opt/yarn-* /opt/yarn
