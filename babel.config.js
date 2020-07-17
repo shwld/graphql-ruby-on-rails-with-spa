@@ -35,9 +35,8 @@ module.exports = function (api) {
           exclude: ['transform-typeof-symbol']
         }
       ],
-      // ['@babel/preset-typescript', { allExtensions: true, isTSX: true }],
-      ['babel-preset-typescript-vue', { allExtensions: true, isTSX: true }],
-      ['@babel/preset-typescript', { 'allExtensions': true, 'isTSX': true }]
+      ['@babel/preset-typescript', { allExtensions: true, isTSX: true }],
+      ['babel-preset-typescript-vue', { allExtensions: true, isTSX: true }]
     ].filter(Boolean),
     plugins: [
       'babel-plugin-macros',

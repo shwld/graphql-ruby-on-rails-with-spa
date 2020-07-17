@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "declaration": false,
     "emitDecoratorMetadata": true,
@@ -12,6 +13,7 @@
     "moduleResolution": "node",
     "noEmit": true,
     "paths": {
+      "@/*": ["app/javascript/*"],
       "*": ["./app/javascript/types/*"]
     },
     "resolveJsonModule": true,

@@ -1,5 +1,5 @@
 import Rails from '@rails/ujs'
-import * as ActionCable from 'actioncable'
+import ActionCable from 'actioncable'
 import { ApolloClient } from 'apollo-client'
 import { createHttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
@@ -11,13 +11,6 @@ const cable = ActionCable.createConsumer()
 
 const { GRAPHQL_BASE_URL } = process.env
 
-const hasSubscriptionOperation = ({ query: { definitions } }) => {
-  return definitions.some(
-    ({ kind, operation }) =>
-      kind === 'OperationDefinition' && operation === 'subscription'
-  )
-}
-
 const authLink = setContext(async (_, { headers }) => {
   return {
     headers: {
@@ -28,7 +21,13 @@ const authLink = setContext(async (_, { headers }) => {
 })
 
 const link = ApolloLink.split(
-  hasSubscriptionOperation,
+  ({ query: { definitions } }) => {
+    return definitions.some(
+      /** FIX: type */
+      ({ kind, operation }: any) =>
+        kind === 'OperationDefinition' && operation === 'subscription'
+    )
+  },
   new ActionCableLink({ cable }),
   createHttpLink({
     uri: GRAPHQL_BASE_URL
