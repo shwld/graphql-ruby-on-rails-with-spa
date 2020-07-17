@@ -39,7 +39,7 @@
     ></script>
 
     <%= csrf_meta_tags %>
-    <%= javascript_pack_tag 'application' %>
+    <%= javascript_pack_tag "application" %>
 
     <!--
       These two files can be found in the npm module, however you may wish to
@@ -58,7 +58,7 @@
     <script>
       function graphQLFetcher(graphQLParams) {
         return fetch(
-          '<%=graphql_path%>',
+          '<%= graphql_path %>',
           {
             method: 'post',
             headers: {

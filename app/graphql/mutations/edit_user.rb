@@ -15,5 +15,4 @@ class Mutations::EditUser < Mutations::BaseMutation
     # TODO: update
     { user: user }
   end
-
 end

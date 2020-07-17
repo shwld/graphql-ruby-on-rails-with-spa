@@ -3,7 +3,7 @@ class Subscriptions::Chat < Subscriptions::BaseSubscription
   # argument :message, String, required: true
 
   def subscribe
-    { messages: [ 'スタート' ] }
+    { messages: ['スタート'] }
   end
 
   def update

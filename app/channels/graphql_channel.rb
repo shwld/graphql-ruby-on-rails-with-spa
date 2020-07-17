@@ -4,9 +4,9 @@ class GraphqlChannel < ApplicationCable::Channel
   end
 
   def execute(data)
-    query = data["query"]
-    variables = ensure_hash(data["variables"])
-    operation_name = data["operationName"]
+    query = data['query']
+    variables = ensure_hash(data['variables'])
+    operation_name = data['operationName']
     context = {
       channel: self,
     }
@@ -15,7 +15,7 @@ class GraphqlChannel < ApplicationCable::Channel
       query: query,
       context: context,
       variables: variables,
-      operation_name: operation_name
+      operation_name: operation_name,
     })
 
     payload = {
@@ -38,20 +38,20 @@ class GraphqlChannel < ApplicationCable::Channel
 
   private
 
-    def ensure_hash(ambiguous_param)
-      case ambiguous_param
-      when String
-        if ambiguous_param.present?
-          ensure_hash(JSON.parse(ambiguous_param))
-        else
-          {}
-        end
-      when Hash, ActionController::Parameters
-        ambiguous_param
-      when nil
-        {}
+  def ensure_hash(ambiguous_param)
+    case ambiguous_param
+    when String
+      if ambiguous_param.present?
+        ensure_hash(JSON.parse(ambiguous_param))
       else
-        raise ArgumentError, "Unexpected parameter: #{ambiguous_param}"
+        {}
       end
+    when Hash, ActionController::Parameters
+      ambiguous_param
+    when nil
+      {}
+    else
+      raise ArgumentError, "Unexpected parameter: #{ambiguous_param}"
     end
+  end
 end

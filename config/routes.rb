@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   if Rails.env.development?
     post '/schema', to: 'graphql_schema#execute'
     get '/graphiql', to: 'graphiql#show'
-    mount LetterOpenerWeb::Engine, at: "/letter_opener"
+    mount LetterOpenerWeb::Engine, at: '/letter_opener'
   end
 
   get '*path' => 'view#show', constraints: lambda { |req|
