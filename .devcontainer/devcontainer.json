@@ -4,5 +4,5 @@
 
   "service": "app",
   "workspaceFolder": "/usr/src/app",
-  "extensions": ["esbenp.prettier-vscode", "octref.vetur"]
+  "extensions": ["esbenp.prettier-vscode", "jnbt.vscode-rufo", "octref.vetur"]
 }
