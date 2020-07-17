@@ -12,13 +12,4 @@ class AppSchema < GraphQL::Schema
   use GraphQL::Pagination::Connections
 
   use GraphQL::Batch
-
-  def self.object_from_id(unique_id, context)
-    splitted_id = unique_id.split('_')
-    splitted_id[0].constantize.find_by(id: splitted_id[1])
-  end
-
-  def self.id_from_object(object, type, context)
-    "#{object.class.name}_#{object.id}"
-  end
 end
