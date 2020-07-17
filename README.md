@@ -1,7 +1,10 @@
 # graphql-ruby + devise + Single Page Application on Rails
 
-![](https://github.com/shwld/graphql-ruby-on-rails-with-spa/workflows/rspec/badge.svg)
+![Github Actions](https://github.com/shwld/graphql-ruby-on-rails-with-spa/workflows/rspec/badge.svg)
+![CircleCI](https://circleci.com/gh/shwld/graphql-ruby-on-rails-with-spa.svg?style=svg)](https://circleci.com/gh/shwld/graphql-ruby-on-rails-with-spa)
 ![Heroku](https://heroku-badge.herokuapp.com/?app=graphql-ruby-on-rails-with-spa)
+
+---
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/shwld/graphql-ruby-on-rails-with-spa)
 
