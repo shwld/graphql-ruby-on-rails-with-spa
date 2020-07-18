@@ -6,7 +6,7 @@ class Mutations::Say < Mutations::BaseMutation
   field :completed, Boolean, null: true
 
   def resolve(text:)
-    AppSchema.subscriptions.trigger(:chat, {}, { message: text })
+    AppSchema.subscriptions.trigger(:on_message_added, {}, { message: text })
     { completed: true }
   end
 end

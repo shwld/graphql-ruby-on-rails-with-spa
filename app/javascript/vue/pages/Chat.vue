@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <form class="flex justify-center items-start pt-10" @submit.prevent="say">
+  <div class="flex flex-col justify-center items-center pt-10">
+    <form @submit.prevent="mutate">
       <tw-card>
         <p>This is example chat app!</p>
         Hello {{ currentUser ? currentUser.email : 'loading' }}
@@ -10,45 +10,58 @@
         <tw-button class="w-full mt-3" :disabled="loading">Submit</tw-button>
       </tw-card>
     </form>
-    <div>{{ result }}</div>
+    <div class="mt-5">
+      <p v-for="(message, i) in state.messages" :key="i">{{ message }}</p>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import { defineComponent, reactive } from '@vue/composition-api'
-import { useResult } from '@vue/apollo-composable'
+import { defineComponent, reactive, ref } from '@vue/composition-api'
 import { useCurrentUser } from '@/vue/hooks/currentUser'
-import { useSayMutation, useChatSubscription } from '@/graphql/types'
+import {
+  SayDocument,
+  SayMutation,
+  SayMutationVariables,
+  useOnMessageAddedSubscription
+} from '@/graphql/types'
+import { useMutation } from '@vue/apollo-composable'
 
 type State = {
   text: string
+  messages: string[]
 }
 
 export default defineComponent({
   setup() {
     const state = reactive<State>({
-      text: ''
+      text: '',
+      messages: []
     })
     const { currentUser } = useCurrentUser()
 
-    const { mutate, error, loading, onDone } = useSayMutation({
-      variables: { input: { text: '' } }
-    })
-
-    const { result } = useChatSubscription()
-
-    const say = () => {
-      mutate({
+    const { mutate, error, loading, onDone } = useMutation<
+      SayMutation,
+      SayMutationVariables
+    >(SayDocument, () => ({
+      variables: {
         input: {
           text: state.text
         }
-      })
-    }
+      }
+    }))
+
+    const { result, onResult } = useOnMessageAddedSubscription()
 
     onDone(() => (state.text = ''))
+    onResult((result) => {
+      const message = result?.data?.onMessageAdded.message
+      if (message) {
+        state.messages.push(message)
+      }
+    })
 
-    return { result, state, currentUser, loading, say }
+    return { state, currentUser, loading, mutate }
   }
 })
 </script>

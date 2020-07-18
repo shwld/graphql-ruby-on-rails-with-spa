@@ -1,3 +1,3 @@
 class Types::SubscriptionType < Types::BaseObject
-  field :chat, subscription: Subscriptions::Chat
+  field :on_message_added, subscription: Subscriptions::OnMessageAdded
 end
