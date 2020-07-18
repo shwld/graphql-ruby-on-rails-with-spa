@@ -7,5 +7,7 @@ html
     = csp_meta_tag
     = javascript_pack_tag 'application'
     = stylesheet_pack_tag 'application'
+    javascript:
+      window.SENTRY_DSN = "<%= ENV['SENTRY_DSN'] %>"
   body
     = yield

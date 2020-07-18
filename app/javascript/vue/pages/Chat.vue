@@ -8,6 +8,7 @@
         <p class="pt-10">Say!</p>
         <tw-input v-model="state.text" />
         <tw-button class="w-full mt-3" :disabled="loading">Submit</tw-button>
+        <span>{{ error }}</span>
       </tw-card>
     </form>
     <div class="mt-5">
@@ -40,7 +41,7 @@ export default defineComponent({
     })
     const { currentUser } = useCurrentUser()
 
-    const { mutate, error, loading, onDone } = useMutation<
+    const { mutate, error, loading, onDone, onError } = useMutation<
       SayMutation,
       SayMutationVariables
     >(SayDocument, () => ({
@@ -51,9 +52,13 @@ export default defineComponent({
       }
     }))
 
-    const { result, onResult } = useOnMessageAddedSubscription()
+    const { onResult } = useOnMessageAddedSubscription()
 
     onDone(() => (state.text = ''))
+    onError((e) => {
+      // TODO: get validation errors from graphQLErrors
+      console.log(e)
+    })
     onResult((result) => {
       const message = result?.data?.onMessageAdded.message
       if (message) {
@@ -61,7 +66,7 @@ export default defineComponent({
       }
     })
 
-    return { state, currentUser, loading, mutate }
+    return { state, error, currentUser, loading, mutate }
   }
 })
 </script>
