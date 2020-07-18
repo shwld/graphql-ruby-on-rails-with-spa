@@ -15,6 +15,10 @@
 - Devise authentication
 - Single Page Application (Vue.js)
 
+more
+
+[日本語](/ja/README.md)
+
 ## Install
 
 ```
