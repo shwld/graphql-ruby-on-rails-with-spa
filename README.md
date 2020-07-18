@@ -30,8 +30,4 @@ code --install-extension ms-vscode-remote.vscode-remote-extensionpack
 
 Open folder in container
 
-![remote development](./docs/vscode1.png)
-
-## TODO
-
-- [ ] Client and serverside validation rail
+![remote development](./docs/images/vscode1.png)
