@@ -2,15 +2,12 @@
   <div id="app">
     <template v-if="!loading">
       <ul
-        v-if="result.currentUser"
+        v-if="currentUser"
         class="flex items-center justify-end p-6 bg-teal-500"
       >
         <li class="mr-6">
-          <router-link
-            to="/protected/example"
-            class="text-white hover:text-yellow-800"
-          >
-            {{ result.currentUser.email }}
+          <router-link to="/chat" class="text-white hover:text-yellow-800">
+            {{ currentUser.email }}
           </router-link>
         </li>
         <li>
@@ -27,20 +24,22 @@
           <a href="/users/sign_up">Sign up</a>
         </li>
       </ul>
+      <router-view v-if="currentUser" />
+      <div v-else>Please sign in</div>
     </template>
-    <router-view />
+    <div v-else>loading...</div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import { defineComponent } from '@vue/composition-api'
-import { useCurrentUserQuery } from '@/graphql/types'
+import { useCurrentUser } from './hooks/currentUser'
 
 export default defineComponent({
   setup() {
-    const { result, loading } = useCurrentUserQuery()
-    return { result, loading }
+    const { currentUser, loading } = useCurrentUser()
+    return { currentUser, loading }
   }
 })
 </script>

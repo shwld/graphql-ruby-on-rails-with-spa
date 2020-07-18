@@ -5,7 +5,8 @@ import App from '@/vue/App.vue'
 import VueCompositionApi, { provide } from '@vue/composition-api'
 import { DefaultApolloClient } from '@vue/apollo-composable'
 import VueRouter from 'vue-router'
-import { routes } from '@/vue/routes'
+import { routes } from '@/vue/config/routes'
+import '@/vue/config/globalComponents'
 
 Vue.use(VueApollo)
 Vue.use(VueCompositionApi)

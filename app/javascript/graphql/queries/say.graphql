@@ -1,0 +1,5 @@
+mutation say($input: SayInput!) {
+  say(input: $input) {
+    completed
+  }
+}

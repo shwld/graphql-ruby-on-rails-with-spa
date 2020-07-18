@@ -1,19 +1,19 @@
 <template>
-  <div>
-    <p>Protected</p>
-    <router-view />
+  <div class="max-w-sm rounded overflow-hidden shadow-lg">
+    <div class="px-6 py-4">
+      <slot />
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import { defineComponent } from '@vue/composition-api'
-import { useCurrentUserQuery } from '@/graphql/types'
+import { useResult } from '@vue/apollo-composable'
 
 export default defineComponent({
-  setup() {
-    const { result, loading } = useCurrentUserQuery()
-    return { result, loading }
+  setup(props, ctx) {
+    return {}
   }
 })
 </script>
