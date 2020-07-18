@@ -17,7 +17,7 @@
 
 more
 
-[日本語](/ja/README.md)
+[日本語](/docs/ja/README.md)
 
 ## Install
 
