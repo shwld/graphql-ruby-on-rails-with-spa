@@ -29,7 +29,7 @@
     "vue-template-compiler": "^2.6.11"
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "1.14.0",
+    "@graphql-codegen/cli": "1.17.4",
     "@graphql-codegen/introspection": "1.14.0",
     "@graphql-codegen/typescript-operations": "1.14.0",
     "@types/actioncable": "^5.2.3",
