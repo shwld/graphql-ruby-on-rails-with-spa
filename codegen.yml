@@ -8,6 +8,7 @@ generates:
       - typescript
       - typescript-operations
       - typescript-vue-apollo
+      - typed-document-node
     config:
       withCompositionFunctions: true
   ./graphql.schema.json:
