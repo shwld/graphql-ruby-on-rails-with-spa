@@ -1,6 +1,7 @@
 {
   "license": "MIT",
   "dependencies": {
+    "@babel/preset-react": "^7.10.4",
     "@babel/preset-typescript": "^7.10.4",
     "@graphql-codegen/typescript-vue-apollo": "^1.17.0",
     "@rails/activestorage": "^6.0.3-1",
@@ -16,10 +17,14 @@
     "apollo-link-context": "^1.0.20",
     "apollo-link-error": "^1.1.13",
     "apollo-link-http": "^1.5.17",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "babel-preset-typescript-vue": "^1.1.1",
     "graphql": "^15.0.0",
     "graphql-tag": "^2.10.3",
     "lodash": "^4.17.19",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "tailwindcss": "^1.4.6",
     "typescript": "^3.9.6",
     "vue": "^2.6.11",
