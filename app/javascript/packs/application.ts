@@ -1,4 +1,4 @@
-import * as Sentry from '@sentry/browser'
+import * as Sentry from '@sentry/react'
 import '@/styles/application.sass'
 import Rails from '@rails/ujs'
 import * as ActiveStorage from '@rails/activestorage'

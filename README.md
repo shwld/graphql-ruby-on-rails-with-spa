@@ -13,7 +13,7 @@
 - Ruby on Rails
 - graphql-ruby
 - Devise authentication
-- Single Page Application (Vue.js)
+- Single Page Application
 
 more
 

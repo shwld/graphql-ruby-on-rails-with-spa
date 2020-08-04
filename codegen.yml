@@ -1,5 +1,5 @@
 overwrite: true
-schema: "http://app:3000/schema"
+schema: 'http://app:3000/schema'
 documents:
   - ./app/javascript/graphql/**/*.graphql
 generates:
@@ -7,10 +7,11 @@ generates:
     plugins:
       - typescript
       - typescript-operations
-      - typescript-vue-apollo
+      - typescript-react-apollo
       - typed-document-node
     config:
-      withCompositionFunctions: true
+      withHooks: true
+      withRefetchFn: true
   ./graphql.schema.json:
     plugins:
-      - "introspection"
+      - 'introspection'

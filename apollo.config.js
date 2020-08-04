@@ -7,6 +7,7 @@ module.exports = {
     },
     // Files processed by the extension
     includes: [
+      'app/javascript/**/*.tsx',
       'app/javascript/**/*.vue',
       'app/javascript/**/*.js',
       'app/javascript/**/*.ts'

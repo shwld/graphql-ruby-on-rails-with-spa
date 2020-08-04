@@ -1,7 +1,7 @@
 {
   "name": "graphql-ruby + devise + Single Page Application on Rails",
   "description": "graphql-ruby + devise + Single Page Application on Rails",
-  "keywords": ["graphql-ruby", "ruby", "rails", "devise", "Vue.js", "SPA"],
+  "keywords": ["graphql-ruby", "ruby", "rails", "devise", "SPA"],
   "website": "https://github.com/shwld/graphql-ruby-on-rails-with-spa",
   "addons": ["papertrail", "sentry", "heroku-redis", "sendgrid"]
 }
