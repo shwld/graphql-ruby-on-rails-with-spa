@@ -6,7 +6,7 @@ import {
   FetchResult,
   Operation,
   NextLink
-} from 'apollo-link'
+} from '@apollo/client'
 import { Cable } from 'actioncable'
 import { print } from 'graphql'
 

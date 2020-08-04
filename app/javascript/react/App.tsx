@@ -1,5 +1,7 @@
 import React from 'react'
 import * as Sentry from '@sentry/react'
+import { ApolloProvider } from '@apollo/client'
+import { apolloClient } from '@/graphql/apollo'
 
 function FallbackComponent() {
   return <div>An error has occured</div>
@@ -12,7 +14,9 @@ type Props = {}
 const App: React.FC<Props> = () => {
   return (
     <Sentry.ErrorBoundary fallback={FallbackComponent} showDialog>
-      <div>Hello React</div>
+      <ApolloProvider client={apolloClient}>
+        <div>Hello React</div>
+      </ApolloProvider>
     </Sentry.ErrorBoundary>
   )
 }

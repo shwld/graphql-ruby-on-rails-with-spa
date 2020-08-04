@@ -1,13 +1,16 @@
 import * as Sentry from '@sentry/browser'
 import Rails from '@rails/ujs'
 import ActionCable from 'actioncable'
-import { ApolloClient } from 'apollo-client'
-import { createHttpLink } from 'apollo-link-http'
-import { InMemoryCache } from 'apollo-cache-inmemory'
-import { ApolloLink, Operation } from 'apollo-link'
-import { setContext } from 'apollo-link-context'
+import {
+  ApolloClient,
+  createHttpLink,
+  InMemoryCache,
+  ApolloLink,
+  Operation
+} from '@apollo/client'
+import { setContext } from '@apollo/client/link/context'
 import { ActionCableLink } from './actionCableLink'
-import { onError } from 'apollo-link-error'
+import { onError } from '@apollo/client/link/error'
 
 const cable = ActionCable.createConsumer()
 
