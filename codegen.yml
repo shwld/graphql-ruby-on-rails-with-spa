@@ -8,10 +8,10 @@ generates:
       - typescript
       - typescript-operations
       - typescript-react-apollo
-      - typed-document-node
     config:
       withHooks: true
       withRefetchFn: true
+      gqlImport: '@apollo/client#gql'
   app/javascript/vue/graphql.ts:
     plugins:
       - typescript
