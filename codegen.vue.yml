@@ -3,20 +3,12 @@ schema: 'http://app:3000/schema'
 documents:
   - ./app/javascript/graphql/**/*.graphql
 generates:
-  app/javascript/react/graphql.tsx:
-    plugins:
-      - typescript
-      - typescript-operations
-      - typescript-react-apollo
-      - typed-document-node
-    config:
-      withHooks: true
-      withRefetchFn: true
-  app/javascript/vue/graphql.ts:
+  app/javascript/graphql/types.ts:
     plugins:
       - typescript
       - typescript-operations
       - typescript-vue-apollo
+      - typed-document-node
     config:
       withCompositionFunctions: true
   ./graphql.schema.json:

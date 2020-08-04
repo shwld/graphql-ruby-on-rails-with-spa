@@ -1,14 +1,6 @@
-import * as Sentry from '@sentry/react'
 import '@/styles/application.sass'
 import Rails from '@rails/ujs'
 import * as ActiveStorage from '@rails/activestorage'
-
-const SENTRY_DSN = (window as any).SENTRY_DSN
-if (SENTRY_DSN) {
-  Sentry.init({
-    dsn: SENTRY_DSN
-  })
-}
 
 Rails.start()
 ActiveStorage.start()
