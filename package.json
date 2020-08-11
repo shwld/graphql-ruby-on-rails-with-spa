@@ -33,7 +33,7 @@
     "@graphql-codegen/introspection": "1.14.0",
     "@graphql-codegen/typed-document-node": "^1.17.4",
     "@graphql-codegen/typescript": "^1.17.4",
-    "@graphql-codegen/typescript-operations": "^1.17.4",
+    "@graphql-codegen/typescript-operations": "^1.17.8",
     "@types/actioncable": "^5.2.3",
     "@types/lodash": "^4.14.157",
     "@types/webpack-env": "^1.15.2",
