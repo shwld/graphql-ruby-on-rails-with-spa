@@ -1,12 +1,6 @@
 // LICENSE: https: github.com/rmosolgo/graphql-ruby/blob/master/javascript_client/LICENSE.md
 
-import {
-  ApolloLink,
-  Observable,
-  FetchResult,
-  Operation,
-  NextLink
-} from '@apollo/client'
+import { ApolloLink, Observable, FetchResult, Operation } from '@apollo/client'
 import { Cable } from 'actioncable'
 import { print } from 'graphql'
 
@@ -35,32 +29,32 @@ export class ActionCableLink extends ApolloLink {
 
   // Interestingly, this link does _not_ call through to `next` because
   // instead, it sends the request to ActionCable.
-  request(operation: Operation, _next: NextLink): RequestResult {
+  request(operation: Operation): RequestResult {
     return new Observable((observer) => {
-      var channelId = Math.round(Date.now() + Math.random() * 100000).toString(
-        16
-      )
-      var actionName = this.actionName
-      var subscription = this.cable.subscriptions.create(
+      const channelId = Math.round(
+        Date.now() + Math.random() * 100000
+      ).toString(16)
+      const actionName = this.actionName
+      const subscription = this.cable.subscriptions.create(
         Object.assign(
           {},
           {
             channel: this.channelName,
-            channelId: channelId
+            channelId,
           },
           this.connectionParams
         ),
         {
-          connected: function () {
+          connected() {
             this.perform(actionName, {
               query: operation.query ? print(operation.query) : null,
               variables: operation.variables,
               // This is added for persisted operation support:
               operationId: (operation as { operationId?: string }).operationId,
-              operationName: operation.operationName
+              operationName: operation.operationName,
             })
           },
-          received: function (payload) {
+          received(payload) {
             if (payload.result.data || payload.result.errors) {
               observer.next(payload.result)
             }
@@ -68,7 +62,7 @@ export class ActionCableLink extends ApolloLink {
             if (!payload.more) {
               observer.complete()
             }
-          }
+          },
         }
       )
 

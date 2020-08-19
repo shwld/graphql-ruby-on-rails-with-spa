@@ -1,6 +1,6 @@
 import '@/styles/application.sass'
-import Rails from '@rails/ujs'
 import * as ActiveStorage from '@rails/activestorage'
+import Rails from '@rails/ujs'
 
 Rails.start()
 ActiveStorage.start()

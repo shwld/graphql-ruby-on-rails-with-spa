@@ -11,7 +11,7 @@ generates:
     config:
       withHooks: true
       withRefetchFn: true
-      gqlImport: '@apollo/client#gql'
+      gqlImport: 'graphql-tag'
   app/javascript/vue/graphql.ts:
     plugins:
       - typescript

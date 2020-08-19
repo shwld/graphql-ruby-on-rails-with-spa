@@ -1,16 +1,16 @@
-import * as Sentry from '@sentry/browser'
-import Rails from '@rails/ujs'
-import ActionCable from 'actioncable'
 import {
   ApolloClient,
   createHttpLink,
   InMemoryCache,
   ApolloLink,
-  Operation
+  Operation,
 } from '@apollo/client'
 import { setContext } from '@apollo/client/link/context'
-import { ActionCableLink } from './actionCableLink'
 import { onError } from '@apollo/client/link/error'
+import Rails from '@rails/ujs'
+import * as Sentry from '@sentry/browser'
+import ActionCable from 'actioncable'
+import { ActionCableLink } from './actionCableLink'
 
 const cable = ActionCable.createConsumer()
 
@@ -22,7 +22,7 @@ const operationInfo = (operation: Operation) => ({
   fragments: operation.query.definitions
     .filter((defn) => defn.kind === 'FragmentDefinition')
     .map((defn) => defn.loc?.source.name)
-    .join(', ')
+    .join(', '),
 })
 
 const sentryLink = new ApolloLink((operation, forward) => {
@@ -32,7 +32,7 @@ const sentryLink = new ApolloLink((operation, forward) => {
   Sentry.addBreadcrumb({
     category: 'graphql',
     data: operationInfo(operation),
-    level: Sentry.Severity.Debug
+    level: Sentry.Severity.Debug,
   })
   return forward(operation)
 })
@@ -41,8 +41,8 @@ const authLink = setContext(async (_, { headers }) => {
   return {
     headers: {
       ...headers,
-      'X-CSRF-Token': Rails.csrfToken()
-    }
+      'X-CSRF-Token': Rails.csrfToken(),
+    },
   }
 })
 
@@ -56,7 +56,7 @@ const link = ApolloLink.split(
   },
   new ActionCableLink({ cable }),
   createHttpLink({
-    uri: GRAPHQL_BASE_URL
+    uri: GRAPHQL_BASE_URL,
   })
 )
 
@@ -69,25 +69,27 @@ export const apolloClient = new ApolloClient({
       Sentry.addBreadcrumb({
         category: 'graphql',
         data: operationInfo(operation),
-        level: Sentry.Severity.Debug
+        level: Sentry.Severity.Debug,
       })
       if (graphQLErrors) {
         graphQLErrors.forEach((error) => {
           const { message, locations, path } = error
           console.warn(
-            `[GraphQL error]: Message: ${message}, Path: ${path}`,
+            `[GraphQL error]: Message: ${message}, Path: ${JSON.stringify(
+              path
+            )}`,
             locations
           )
           Sentry.captureException(error)
         })
       }
       if (networkError) {
-        console.warn(`[Network error]: ${networkError}`)
+        console.warn(`[Network error]: ${JSON.stringify(networkError)}`)
         // Sentry.captureException(networkError)
       }
       return forward(operation)
     }),
-    authLink.concat(link)
+    authLink.concat(link),
   ]),
-  cache
+  cache,
 })

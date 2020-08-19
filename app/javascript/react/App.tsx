@@ -1,7 +1,7 @@
-import React from 'react'
-import * as Sentry from '@sentry/react'
-import { ApolloProvider } from '@apollo/client'
 import { apolloClient } from '@/graphql/apollo'
+import { ApolloProvider } from '@apollo/client'
+import * as Sentry from '@sentry/react'
+import React from 'react'
 
 function FallbackComponent() {
   return <div>An error has occured</div>
