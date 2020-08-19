@@ -47,7 +47,7 @@ export default defineComponent({
     >(SayDocument, () => ({
       variables: {
         input: {
-          text: state.text
+          text: `Vue: ${state.text}`
         }
       }
     }))
