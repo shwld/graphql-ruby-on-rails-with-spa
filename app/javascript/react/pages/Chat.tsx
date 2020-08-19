@@ -5,11 +5,6 @@ import { useSayMutation, useOnMessageAddedSubscription } from '../graphql'
 
 type Props = {}
 
-type State = {
-  text: string
-  messages: string[]
-}
-
 export const Chat: React.FC<Props> = () => {
   const [text, setText] = useState<string>('')
   const [messages, setMessages] = useState<string[]>([])
