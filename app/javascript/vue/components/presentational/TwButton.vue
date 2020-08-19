@@ -7,9 +7,7 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import { defineComponent, PropType } from '@vue/composition-api'
-import { useResult } from '@vue/apollo-composable'
+import { defineComponent } from '@vue/composition-api'
 
 export default defineComponent({
   setup(props, ctx) {

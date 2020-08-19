@@ -1,16 +1,24 @@
 overwrite: true
-schema: "http://app:3000/schema"
+schema: 'http://app:3000/schema'
 documents:
   - ./app/javascript/graphql/**/*.graphql
 generates:
-  app/javascript/graphql/types.ts:
+  app/javascript/react/graphql.tsx:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      withHooks: true
+      withRefetchFn: true
+      gqlImport: 'graphql-tag'
+  app/javascript/vue/graphql.ts:
     plugins:
       - typescript
       - typescript-operations
       - typescript-vue-apollo
-      - typed-document-node
     config:
       withCompositionFunctions: true
   ./graphql.schema.json:
     plugins:
-      - "introspection"
+      - 'introspection'

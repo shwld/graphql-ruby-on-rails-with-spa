@@ -1,5 +1,5 @@
 import { useResult } from '@vue/apollo-composable'
-import { useCurrentUserQuery } from '@/graphql/types'
+import { useCurrentUserQuery } from '../graphql'
 
 export const useCurrentUser = () => {
   const { result, loading } = useCurrentUserQuery()

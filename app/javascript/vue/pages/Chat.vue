@@ -25,7 +25,7 @@ import {
   SayMutation,
   SayMutationVariables,
   useOnMessageAddedSubscription
-} from '@/graphql/types'
+} from '../graphql'
 import { useMutation } from '@vue/apollo-composable'
 
 type State = {
@@ -47,7 +47,7 @@ export default defineComponent({
     >(SayDocument, () => ({
       variables: {
         input: {
-          text: state.text
+          text: `Vue: ${state.text}`
         }
       }
     }))

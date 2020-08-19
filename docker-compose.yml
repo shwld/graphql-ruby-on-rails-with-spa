@@ -25,6 +25,7 @@ services:
       - RAILS_ENV=development
       - WEBPACKER_DEV_SERVER_HOST=webpacker
       - WEBPACKER_DEV_SERVER_PUBLIC=webpacker:3035
+      - FIXTURE_PATH=db/fixtures/dev
     env_file: ./.env
     working_dir: /usr/src/app
   db:
@@ -63,6 +64,18 @@ services:
     image: redis
     ports:
       - 6379:6379
+  test:
+    <<: *app
+    container_name: test
+    command: bundle exec guard --no-bundler-warning --no-interactions
+    depends_on:
+      - db
+    environment:
+      - LANG=C.UTF-8
+      - BUNDLE_PATH=vendor/bundle
+      - RAILS_ENV=test
+      - FIXTURE_PATH=db/fixtures/dev
+    ports: []
 
 volumes:
   db:

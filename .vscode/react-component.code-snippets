@@ -1,0 +1,19 @@
+{
+  "React.FC": {
+    "scope": "typescriptreact",
+    "prefix": ["fc", "component"],
+    "body": [
+      "import React from 'react'",
+      "",
+      "type Props = {}",
+      "",
+      "// type State = {}",
+      "",
+      "export const ${TM_FILENAME_BASE}: React.FC<Props> = () => {",
+      "  return ($0)",
+      "}",
+      ""
+    ],
+    "description": "React Functional Component"
+  }
+}

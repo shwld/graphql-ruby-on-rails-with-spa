@@ -26,6 +26,8 @@ group :development, :test do
   gem 'faker'
   gem 'gimei'
   gem 'graphql-autotest'
+  gem 'guard-rspec'
+  gem 'guard'
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'rspec-rails'
