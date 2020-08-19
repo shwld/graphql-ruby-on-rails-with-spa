@@ -4,6 +4,7 @@ import { routes } from '@/vue/config/routes'
 import '@/vue/config/globalComponents'
 import '@/styles/vue_application.sass'
 import * as Sentry from '@sentry/browser'
+import { Vue as VueIntegration } from '@sentry/integrations'
 import { DefaultApolloClient } from '@vue/apollo-composable'
 import VueCompositionApi, { provide } from '@vue/composition-api'
 import Vue from 'vue'
@@ -14,7 +15,7 @@ const SENTRY_DSN = (window as any).SENTRY_DSN
 if (SENTRY_DSN) {
   Sentry.init({
     dsn: SENTRY_DSN,
-    integrations: [new (Sentry.Integrations as any).Vue()],
+    integrations: [new VueIntegration({ Vue, attachProps: true })],
   })
 }
 
