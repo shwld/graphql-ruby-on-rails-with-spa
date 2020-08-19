@@ -29,5 +29,6 @@ jobs:
         run: |
           bin/rails db:create
           bin/rails db:schema:load
+          bin/rails db:seed_fu
       - name: Run test
         run: rspec

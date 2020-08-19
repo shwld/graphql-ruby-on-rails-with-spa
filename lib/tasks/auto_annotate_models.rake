@@ -8,7 +8,7 @@ if Rails.env.development?
     # same name.
     Annotate.set_defaults(
       'active_admin' => 'false',
-      'additional_file_patterns' => [],
+      'additional_file_patterns' => ['db/fixtures/**/*%PLURALIZED_MODEL_NAME%.rb', 'app/graphql/types/objects/%MODEL_NAME%_type.rb', 'app/graphql/mutations/*_%MODEL_NAME%.rb'],
       'routes' => 'false',
       'models' => 'true',
       'position_in_routes' => 'before',

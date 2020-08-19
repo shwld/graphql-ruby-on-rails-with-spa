@@ -13,5 +13,8 @@
   "[ruby]": {
     "editor.defaultFormatter": "mbessey.vscode-rufo"
   },
-  "editor.formatOnSave": true
+  // "editor.formatOnSave": true
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }
