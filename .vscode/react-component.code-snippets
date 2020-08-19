@@ -9,11 +9,9 @@
       "",
       "// type State = {}",
       "",
-      "const ${TM_FILENAME_BASE}: React.FC<Props> = () => {",
+      "export const ${TM_FILENAME_BASE}: React.FC<Props> = () => {",
       "  return ($0)",
       "}",
-      "",
-      "export default ${TM_FILENAME_BASE}",
       ""
     ],
     "description": "React Functional Component"
