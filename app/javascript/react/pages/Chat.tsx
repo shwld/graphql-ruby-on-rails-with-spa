@@ -22,6 +22,8 @@ export const Chat: React.FC<Props> = () => {
     if (!message) return
     setMessages((oldMessages) => [...oldMessages, message])
   }, [messageAdded.data?.onMessageAdded, setMessages])
+
+  if (!currentUser) return <></>
   return (
     <>
       <div className="flex flex-col justify-center items-center pt-10">
