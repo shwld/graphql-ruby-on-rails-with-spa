@@ -1296,16 +1296,16 @@
     pascal-case "^3.1.1"
     tslib "~2.0.0"
 
-"@graphql-codegen/typescript-vue-apollo@^1.17.7":
-  version "1.17.8"
-  resolved "https://registry.yarnpkg.com/@graphql-codegen/typescript-vue-apollo/-/typescript-vue-apollo-1.17.8.tgz#864be523e43e3715c2e6a9cbacecad880841a02c"
-  integrity sha512-Rr7sJgnD1898oQgotnlwRl5UTvNdcViob/r0/uljwooFkvMeM4Rfl9uqExILpIL2rlany/9yJo/jXU+NfgJWzA==
+"@graphql-codegen/typescript-vue-apollo@^1.17.9":
+  version "1.17.9"
+  resolved "https://registry.yarnpkg.com/@graphql-codegen/typescript-vue-apollo/-/typescript-vue-apollo-1.17.9.tgz#9e06aba5137e888a4f8992e2da8d3441daa36126"
+  integrity sha512-qDtDX0E/vpXDf8P4sq9LxG/wu5CEJiztlyL1ojI7R74Ih5HTqNxxlzz97g6G7zYt/9Pe3j5hgeoeSf9dqY19oQ==
   dependencies:
     "@graphql-codegen/plugin-helpers" "^1.17.8"
-    "@graphql-codegen/visitor-plugin-common" "^1.17.13"
+    "@graphql-codegen/visitor-plugin-common" "^1.17.14"
     auto-bind "~4.0.0"
     pascal-case "^3.1.1"
-    tslib "~2.0.0"
+    tslib "~2.0.1"
 
 "@graphql-codegen/typescript@^1.17.4", "@graphql-codegen/typescript@^1.17.8":
   version "1.17.8"
@@ -1317,10 +1317,10 @@
     auto-bind "~4.0.0"
     tslib "~2.0.0"
 
-"@graphql-codegen/visitor-plugin-common@^1.17.13":
-  version "1.17.13"
-  resolved "https://registry.yarnpkg.com/@graphql-codegen/visitor-plugin-common/-/visitor-plugin-common-1.17.13.tgz#88dfd8b266aab140a36018807449a1162612e393"
-  integrity sha512-RWL5VcUQh1mcNb+nr7pDnfoMZ9cn2MurDcZMYGTblIXox+FT33y9Cg4erRjzkVuTvxSf7xXc2TSrSkt9MeZRCw==
+"@graphql-codegen/visitor-plugin-common@^1.17.13", "@graphql-codegen/visitor-plugin-common@^1.17.14":
+  version "1.17.14"
+  resolved "https://registry.yarnpkg.com/@graphql-codegen/visitor-plugin-common/-/visitor-plugin-common-1.17.14.tgz#dfd15932a2d9f2a0be3ce945206a173609908769"
+  integrity sha512-tHVkMqQcWuq5xuXm7q8JKcKUVdEYaT61Hnz1OZNgYCBQIOCKUljZcmPuy3F8aJU29XHyZ2vwF2hNG6q4CE3fcQ==
   dependencies:
     "@graphql-codegen/plugin-helpers" "^1.17.8"
     "@graphql-tools/relay-operation-optimizer" "^6.0.18"
@@ -1330,7 +1330,7 @@
     graphql-tag "^2.11.0"
     parse-filepath "^1.0.2"
     pascal-case "^3.1.1"
-    tslib "~2.0.0"
+    tslib "~2.0.1"
 
 "@graphql-toolkit/common@~0.10.4":
   version "0.10.7"
@@ -10378,7 +10378,7 @@ tslib@^1.10.0, tslib@^1.11.1, tslib@^1.8.1, tslib@^1.9.0, tslib@^1.9.3:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.13.0.tgz#c881e13cc7015894ed914862d276436fa9a47043"
   integrity sha512-i/6DQjL8Xf3be4K/E6Wgpekn5Qasl1usyw++dAA35Ue5orEn65VIxOA+YvNNl9HV3qv70T7CNwjODHZrLwvd1Q==
 
-tslib@^2.0.0, tslib@^2.0.1, tslib@~2.0.0:
+tslib@^2.0.0, tslib@^2.0.1, tslib@~2.0.0, tslib@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.0.1.tgz#410eb0d113e5b6356490eec749603725b021b43e"
   integrity sha512-SgIkNheinmEBgx1IUNirK0TUD4X9yjjBRTqqjggWCU3pUEqIk3/Uwl3yRixYKT6WjQuGiwDv4NomL3wqRCj+CQ==
