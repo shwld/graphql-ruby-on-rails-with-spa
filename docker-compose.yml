@@ -67,7 +67,7 @@ services:
   test:
     <<: *app
     container_name: test
-    command: bundle exec guard --no-bundler-warning --no-interactions
+    command: echo 'test!'
     depends_on:
       - db
     environment:

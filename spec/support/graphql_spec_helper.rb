@@ -7,7 +7,7 @@ module GraphqlSpecHelper
         user_signed_in: user_signed_in,
       }
     }
-    let(:researcher_signed_out_context) {
+    let(:user_signed_out_context) {
       {
         current_user: nil,
         user_signed_in: false,
@@ -30,8 +30,8 @@ module GraphqlSpecHelper
     }
 
     shared_examples :need_authorization do |operation_name|
-      let(:context) { researcher_signed_out_context }
-      it 'result is null' do
+      let(:context) { user_signed_out_context }
+      it 'should result is null' do
         expect(response[:errors]).to be_blank
         expect(response[:data][operation_name.to_s.camelize(:lower).to_sym]).to be_nil
       end

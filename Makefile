@@ -20,7 +20,7 @@ console:
 	docker-compose run --rm app bundle exec rails console
 
 .PHONY: migrate
-seed:
+migrate:
 	docker-compose run --rm app bundle exec rails db:migrate
 
 .PHONY: seed
@@ -29,4 +29,4 @@ seed:
 
 .PHONY: test
 test:
-	docker-compose run --rm test
+	docker-compose run --rm test bundle exec guard --no-bundler-warning --no-interactions
