@@ -22,7 +22,7 @@
     "@types/react-dom": "^16.9.8",
     "@types/react-router-dom": "^5.1.5",
     "@types/webpack-env": "^1.15.2",
-    "@typescript-eslint/eslint-plugin": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^3.10.1",
     "@typescript-eslint/parser": "^3.0.0",
     "@vue/apollo-composable": "^4.0.0-alpha.10",
     "@vue/composition-api": "^1.0.0-beta.6",
