@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Mutations::Say, :graphql do
+RSpec.describe 'Mutations::Say', :graphql do
   let(:query_string) do
     %(
       mutation say($input: SayInput!) {
