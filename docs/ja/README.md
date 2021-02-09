@@ -1,3 +1,13 @@
+## is 何
+`graphql-ruby` と `webpacker` を使った速度と柔軟性をバランス良く兼ね備えたテンプレートです。
+
+RailsでReactやVueなどのモダンなJSを利用する場合、Railsのテンプレートに部分的にComponentを入れ込んでいく形を取ることが多くなりますが、これをやるとRailsのViewとSPAのコンポーネント間で複雑な情報の共有や、専用のREST API、Railsのform機能とどう統合するかなど、多岐にわたる複雑な問題にぶち当たり、メンテナンスが困難になるがちです。
+
+これを解消したい場合、完全にAPIとViewを分けてしまい、JSだけのSPAとRailsのAPIとして作るのが割と理想です。
+しかし、この構成だとRailsの良さである開発スピードが損なわれます。
+
+このテンプレートは、小・中規模のプロダクションアプリケーションを実装するにあたって、Railsの速さと、API、SPAの分離によるメンテナンス性のバランスを追求したものです。
+
 ## スタック
 
 | GraphQL                                                                               |                                                                        |
@@ -6,6 +16,13 @@
 | [Vue Apollo](https://v4.apollo.vuejs.org/)                                            | Vue で Apollo を扱うための package                                     |
 | [GraphQL code generator](https://graphql-code-generator.com/)                         | graphql schema, query から typescript の方を生成するツール             |
 | [GraphiQL](https://github.com/graphql/graphiql/blob/main/packages/graphiql/README.md) | graphql の GUI クライアント `http://localhost:3000/grapiql` でアクセス |
+
+## このテンプレートの利点
+- GraphQLの複雑な環境構築が済んでいるのですぐにGraphQLを使い始められます
+- 開発速度を担保するため安定のDeviseを導入しています
+- APIとSPAが疎結合なので、SPA部分を後で完全に切り離しやすいです。
+- Railsはgraphql-rubyを主としてAPIに特化した依存のみを持っているため、APIモードに切り替えるのが容易です（Devise外しだけ大変なのでそこをどうするかが課題です）
+- 基本的にはgraphql-rubyを中心とした薄いテンプレートなので、カスタマイズしやすいと思います。
 
 ## N+1
 
