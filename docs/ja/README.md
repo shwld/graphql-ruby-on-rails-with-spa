@@ -32,7 +32,7 @@ Apollo clientはその結果をうまくキャッシュしてくれるため、�
 普通にgoとか、apollo-serverとかのほうがいいんじゃないかっていう意見もあると思いますが、graphql-rubyは普通に良く出来てるので、RailsやってるならここからGraphQL入門しても全然いいと思うぞよ。
 何よりActiveRecord使えるのでRails+GraphQLの知識で行けるのがRailsエンジニアにとっては大きい
 
-多少覚えないといけないことはありますが、mutatinやqueryにRailsのコントローラーでやっていることを書くだけです。
+多少覚えないといけないことはありますが、mutationやqueryにRailsのコントローラーでやっていることを書くだけです。
 
 ## スタック
 
