@@ -11,6 +11,8 @@ RailsでReactやVueなどのモダンなJSを利用する場合、Railsのテン
 Apolloを始めとしたGraphQL周りの開発体験が最高なのでGraphQLやっていこうぜっていうテンプレートです。
 GraphQLはいいぞ
 
+方向性としては `Hotwire` が対抗馬になる感じのやつ
+
 ## なぜGraphQLか
 SPA + RESTで一回作って見るとわかるのではないでしょうか。
 GraphQLは複雑なクライアントアプリケーションへの明確なソリューションです（断言）
