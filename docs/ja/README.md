@@ -8,6 +8,13 @@ RailsでReactやVueなどのモダンなJSを利用する場合、Railsのテン
 
 このテンプレートは、小・中規模のプロダクションアプリケーションを実装するにあたって、Railsの速さと、API、SPAの分離によるメンテナンス性のバランスを追求したものです。
 
+Apolloを始めとしたGraphQL周りの開発体験が最高なのでGraphQLやっていこうぜっていうテンプレートです。
+GraphQLはいいぞ
+
+## なぜgraphql-rubyか
+普通にgoとか、apollo-serverとかのほうがいいんじゃないかっていう意見もあると思いますが、graphql-rubyは普通に良く出来てるので、RailsやってるならここからGraphQL入門しても全然いいと思うぞよ。
+何よりActiveRecord使えるのでRails+GraphQLの知識で行けるのがRailsエンジニアにとっては大きい
+
 ## スタック
 
 | GraphQL                                                                               |                                                                        |
@@ -16,6 +23,15 @@ RailsでReactやVueなどのモダンなJSを利用する場合、Railsのテン
 | [Vue Apollo](https://v4.apollo.vuejs.org/)                                            | Vue で Apollo を扱うための package                                     |
 | [GraphQL code generator](https://graphql-code-generator.com/)                         | graphql schema, query から typescript の方を生成するツール             |
 | [GraphiQL](https://github.com/graphql/graphiql/blob/main/packages/graphiql/README.md) | graphql の GUI クライアント `http://localhost:3000/grapiql` でアクセス |
+
+## このテンプレートを使うためにあるといいもの
+- Railsの基本的な実装経験
+- React or Vueを使えること
+- GraphQLの知識
+- graphql-rubyでgraphqlサーバーを実装する方法 (https://graphql-ruby.org/)
+  - authorization周りは特に知っておいたほうが良い (https://graphql-ruby.org/authorization/overview.html)
+  - graphqlにおけるN+1への対応方法 (https://github.com/Shopify/graphql-batch)
+- Apolloの使い方 (https://www.apollographql.com/)
 
 ## このテンプレートの利点
 - GraphQLの複雑な環境構築が済んでいるのですぐにGraphQLを使い始められます
