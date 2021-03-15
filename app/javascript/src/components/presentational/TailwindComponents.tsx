@@ -1,13 +1,13 @@
 import React from 'react'
 
-type TwProps<T> = React.DetailedHTMLProps<React.HTMLAttributes<T>, T>
-type TwButtonProps<T> = React.DetailedHTMLProps<
+type TWProps<T> = React.DetailedHTMLProps<React.HTMLAttributes<T>, T>
+type TWButtonProps<T> = React.DetailedHTMLProps<
   React.ButtonHTMLAttributes<T>,
   T
 >
-type TwInputProps<T> = React.DetailedHTMLProps<React.InputHTMLAttributes<T>, T>
+type TWInputProps<T> = React.DetailedHTMLProps<React.InputHTMLAttributes<T>, T>
 
-export const TwButton: React.FC<TwButtonProps<HTMLButtonElement>> = ({
+export const Button: React.FC<TWButtonProps<HTMLButtonElement>> = ({
   className = '',
   ...props
 }) => (
@@ -17,7 +17,7 @@ export const TwButton: React.FC<TwButtonProps<HTMLButtonElement>> = ({
   />
 )
 
-export const TwCard: React.FC<TwProps<HTMLDivElement>> = ({
+export const Card: React.FC<TWProps<HTMLDivElement>> = ({
   children,
   className = '',
   ...props
@@ -30,7 +30,7 @@ export const TwCard: React.FC<TwProps<HTMLDivElement>> = ({
   </div>
 )
 
-export const TwInput: React.FC<TwInputProps<HTMLInputElement>> = ({
+export const Input: React.FC<TWInputProps<HTMLInputElement>> = ({
   className = '',
   ...props
 }) => (

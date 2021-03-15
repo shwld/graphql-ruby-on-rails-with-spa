@@ -1,6 +1,10 @@
 import { useCurrentUser } from '@/src/hooks/currentUser'
 import React, { useState, useEffect } from 'react'
-import { TwCard, TwInput, TwButton } from '../components/presentational/Tw'
+import {
+  Card,
+  Input,
+  Button,
+} from '../components/presentational/TailwindComponents'
 import { useSayMutation, useOnMessageAddedSubscription } from '../graphql'
 
 type Props = {}
@@ -33,19 +37,19 @@ export const Chat: React.FC<Props> = () => {
             mutate()
           }}
         >
-          <TwCard>
+          <Card>
             <p>This is example chat app!</p>
             Hello {currentUser ? currentUser.email : 'loading'}
             <p className="pt-10">Say!</p>
-            <TwInput
+            <Input
               defaultValue={text}
               onChange={(e) => setText(e.target.value)}
             />
-            <TwButton className="w-full mt-3" disabled={loading}>
+            <Button className="w-full mt-3" disabled={loading}>
               Submit
-            </TwButton>
+            </Button>
             {error && <span>{{ error }}</span>}
-          </TwCard>
+          </Card>
         </form>
         <div className="mt-5">
           {messages.map((message, i) => (
