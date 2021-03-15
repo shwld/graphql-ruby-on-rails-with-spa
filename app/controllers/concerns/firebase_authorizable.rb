@@ -4,6 +4,13 @@ require 'uri'
 module FirebaseAuthorizable
   extend ActiveSupport::Concern
 
+  def set_raven_context
+    if firebase_user_signed_in?
+      Raven.user_context(id: current_firebase_user.id)
+    end
+    Raven.extra_context(params: params.to_unsafe_h, url: request.url)
+  end
+
   private
 
   def http_token
@@ -34,7 +41,7 @@ module FirebaseAuthorizable
 
   def current_firebase_user
     return nil if firebase_user_params.blank?
-    @current_firebase_user ||= User.prepare(firebase_user_params)
+    @current_firebase_user ||= FirebaseUser.find_or_create_by(id: firebase_user_params[:sub], issuer: firebase_user_params[:iss])
   end
 
   def firebase_user_signed_in?
