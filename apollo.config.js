@@ -3,14 +3,13 @@ module.exports = {
     service: {
       name: 'my-app',
       // URL to the GraphQL API
-      url: 'http://localhost:3000/graphql'
+      url: 'http://localhost:3000/graphql',
     },
     // Files processed by the extension
     includes: [
       'app/javascript/**/*.tsx',
-      'app/javascript/**/*.vue',
       'app/javascript/**/*.js',
-      'app/javascript/**/*.ts'
-    ]
-  }
+      'app/javascript/**/*.ts',
+    ],
+  },
 }

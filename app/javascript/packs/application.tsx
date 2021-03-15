@@ -1,8 +1,14 @@
-import { App } from '@/react/App'
+import '@/styles/application.sass'
+import { App } from '@/src/App'
+import * as ActiveStorage from '@rails/activestorage'
+import Rails from '@rails/ujs'
 import * as Sentry from '@sentry/react'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import '../styles/react_application.sass'
+
+Rails.start()
+ActiveStorage.start()
+;(global as any).Rails = Rails
 
 const SENTRY_DSN = (window as any).SENTRY_DSN
 if (SENTRY_DSN) {

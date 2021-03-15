@@ -1,4 +1,4 @@
-import { useCurrentUser } from '@/react/hooks/currentUser'
+import { useCurrentUser } from '@/src/hooks/currentUser'
 import React from 'react'
 import { Link } from 'react-router-dom'
 

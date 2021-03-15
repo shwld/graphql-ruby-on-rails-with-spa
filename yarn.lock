@@ -1016,15 +1016,6 @@
     "@babel/helper-plugin-utils" "^7.10.4"
     "@babel/plugin-syntax-typescript" "^7.10.4"
 
-"@babel/plugin-transform-typescript@^7.3.2":
-  version "7.11.0"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-typescript/-/plugin-transform-typescript-7.11.0.tgz#2b4879676af37342ebb278216dd090ac67f13abb"
-  integrity sha512-edJsNzTtvb3MaXQwj8403B7mZoGu9ElDJQZOKjGUnvilquxBA3IQoEIOvkX/1O8xfAsnHS/oQhe2w/IXrr+w0w==
-  dependencies:
-    "@babel/helper-create-class-features-plugin" "^7.10.5"
-    "@babel/helper-plugin-utils" "^7.10.4"
-    "@babel/plugin-syntax-typescript" "^7.10.4"
-
 "@babel/plugin-transform-unicode-regex@^7.8.3":
   version "7.8.3"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-unicode-regex/-/plugin-transform-unicode-regex-7.8.3.tgz#0cef36e3ba73e5c57273effb182f46b91a1ecaad"
@@ -1123,7 +1114,7 @@
     "@babel/plugin-transform-react-jsx-source" "^7.10.4"
     "@babel/plugin-transform-react-pure-annotations" "^7.10.4"
 
-"@babel/preset-typescript@^7.10.4", "@babel/preset-typescript@^7.3.3":
+"@babel/preset-typescript@^7.10.4":
   version "7.10.4"
   resolved "https://registry.yarnpkg.com/@babel/preset-typescript/-/preset-typescript-7.10.4.tgz#7d5d052e52a682480d6e2cc5aa31be61c8c25e36"
   integrity sha512-SdYnvGPv+bLlwkF2VkJnaX/ni1sMNetcGI1+nThF1gyv6Ph8Qucc4ZZAjM5yZcE/AKRXIOTZz7eSRDWOEjPyRQ==
@@ -1371,17 +1362,6 @@
     "@graphql-codegen/visitor-plugin-common" "^1.17.13"
     auto-bind "~4.0.0"
     camel-case "^4.1.1"
-    pascal-case "^3.1.1"
-    tslib "~2.0.0"
-
-"@graphql-codegen/typescript-vue-apollo@^1.17.7":
-  version "1.17.8"
-  resolved "https://registry.yarnpkg.com/@graphql-codegen/typescript-vue-apollo/-/typescript-vue-apollo-1.17.8.tgz#864be523e43e3715c2e6a9cbacecad880841a02c"
-  integrity sha512-Rr7sJgnD1898oQgotnlwRl5UTvNdcViob/r0/uljwooFkvMeM4Rfl9uqExILpIL2rlany/9yJo/jXU+NfgJWzA==
-  dependencies:
-    "@graphql-codegen/plugin-helpers" "^1.17.8"
-    "@graphql-codegen/visitor-plugin-common" "^1.17.13"
-    auto-bind "~4.0.0"
     pascal-case "^3.1.1"
     tslib "~2.0.0"
 
@@ -2386,37 +2366,6 @@
   dependencies:
     eslint-visitor-keys "^1.1.0"
 
-"@vue/apollo-composable@^4.0.0-alpha.10":
-  version "4.0.0-alpha.10"
-  resolved "https://registry.yarnpkg.com/@vue/apollo-composable/-/apollo-composable-4.0.0-alpha.10.tgz#17ad81552f55adde205cad982560ff120e92da87"
-  integrity sha512-PfbUFC+vCjtaRlhYJXekBD9x8yq/JGc/l0J9pEqvE5ZNAE5t6xUsSSdxiWt5bGo08slcdvVno7btydUWnIddBg==
-  dependencies:
-    throttle-debounce "^2.1.0"
-    vue-demi latest
-
-"@vue/component-compiler-utils@^3.1.0":
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/@vue/component-compiler-utils/-/component-compiler-utils-3.2.0.tgz#8f85182ceed28e9b3c75313de669f83166d11e5d"
-  integrity sha512-lejBLa7xAMsfiZfNp7Kv51zOzifnb29FwdnMLa96z26kXErPFioSf9BMcePVIQ6/Gc6/mC0UrPpxAWIHyae0vw==
-  dependencies:
-    consolidate "^0.15.1"
-    hash-sum "^1.0.2"
-    lru-cache "^4.1.2"
-    merge-source-map "^1.1.0"
-    postcss "^7.0.14"
-    postcss-selector-parser "^6.0.2"
-    source-map "~0.6.1"
-    vue-template-es2015-compiler "^1.9.0"
-  optionalDependencies:
-    prettier "^1.18.2"
-
-"@vue/composition-api@^1.0.0-beta.6":
-  version "1.0.0-beta.10"
-  resolved "https://registry.yarnpkg.com/@vue/composition-api/-/composition-api-1.0.0-beta.10.tgz#0494982b684c87b474c7869499ba37d1255a43c5"
-  integrity sha512-/uhUyexcEbFh+nyXF/KMC2H5gJjdMqAMdgc5tp+FASpEGFCXZp7+8yyR1Y91fkt1d0xYUJ2rPB0Hr2fpzyBTVw==
-  dependencies:
-    tslib "^2.0.1"
-
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.9.0.tgz#bd850604b4042459a5a41cd7d338cbed695ed964"
@@ -3198,16 +3147,6 @@ babel-preset-jest@^26.3.0:
     babel-plugin-jest-hoist "^26.2.0"
     babel-preset-current-node-syntax "^0.1.3"
 
-babel-preset-typescript-vue@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/babel-preset-typescript-vue/-/babel-preset-typescript-vue-1.1.1.tgz#6a617dcb0ee26f911735d5f2bbe530286b2c7c02"
-  integrity sha512-wXeR7Y4xCsRUEdm4t4qlpv4wnxolS6jU0c7P2E6zJRWeG1sR0e6NL7DRN0tNuUwkUt0PU8bqVo4vzoA2VEuxnw==
-  dependencies:
-    "@babel/helper-plugin-utils" "^7.0.0"
-    "@babel/plugin-transform-typescript" "^7.3.2"
-    "@babel/preset-typescript" "^7.3.3"
-    vue-template-compiler "^2.6.11"
-
 backo2@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/backo2/-/backo2-1.0.2.tgz#31ab1ac8b129363463e35b3ebb69f4dfcfba7947"
@@ -3277,7 +3216,7 @@ block-stream@*:
   dependencies:
     inherits "~2.0.0"
 
-bluebird@^3.1.1, bluebird@^3.5.5, bluebird@^3.7.2:
+bluebird@^3.5.5, bluebird@^3.7.2:
   version "3.7.2"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.7.2.tgz#9f229c15be272454ffa973ace0dbee79a1b0c36f"
   integrity sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==
@@ -4031,13 +3970,6 @@ console-control-strings@^1.0.0, console-control-strings@~1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/console-control-strings/-/console-control-strings-1.1.0.tgz#3d7cf4464db6446ea644bf4b39507f9851008e8e"
   integrity sha1-PXz0Rk22RG6mRL9LOVB/mFEAjo4=
-
-consolidate@^0.15.1:
-  version "0.15.1"
-  resolved "https://registry.yarnpkg.com/consolidate/-/consolidate-0.15.1.tgz#21ab043235c71a07d45d9aad98593b0dba56bab7"
-  integrity sha512-DW46nrsMJgy9kqAbPt5rKaCr7uFtpo4mSUvLHIUbJEjm0vo+aY5QLwBUq3FK4tRnJr/X0Psc0C4jf/h+HtXSMw==
-  dependencies:
-    bluebird "^3.1.1"
 
 constant-case@3.0.3, constant-case@^3.0.3:
   version "3.0.3"
@@ -6210,11 +6142,6 @@ hash-base@^3.0.0:
     readable-stream "^3.6.0"
     safe-buffer "^5.2.0"
 
-hash-sum@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/hash-sum/-/hash-sum-1.0.2.tgz#33b40777754c6432573c120cc3808bbd10d47f04"
-  integrity sha1-M7QHd3VMZDJXPBIMw4CLvRDUfwQ=
-
 hash.js@^1.0.0, hash.js@^1.0.3:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/hash.js/-/hash.js-1.1.7.tgz#0babca538e8d4ee4a0f8988d68866537a003cf42"
@@ -7881,7 +7808,7 @@ loader-utils@1.2.3:
     emojis-list "^2.0.0"
     json5 "^1.0.1"
 
-loader-utils@^1.0.2, loader-utils@^1.1.0, loader-utils@^1.2.3, loader-utils@^1.4.0:
+loader-utils@^1.1.0, loader-utils@^1.2.3, loader-utils@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-1.4.0.tgz#c579b5e34cb34b1a74edc6c1fb36bfa371d5a613"
   integrity sha512-qH0WSMBtn/oHuwjy/NucEgbx5dbxxnxup9s4PVXJUDHZBQY+s0NWA9rJf53RBnQZxfch7euUui7hpoAPvALZdA==
@@ -8074,7 +8001,7 @@ lower-case@2.0.1, lower-case@^2.0.1:
   dependencies:
     tslib "^1.10.0"
 
-lru-cache@^4.0.1, lru-cache@^4.1.2:
+lru-cache@^4.0.1:
   version "4.1.5"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-4.1.5.tgz#8bbe50ea85bed59bc9e33dcab8235ee9bcf443cd"
   integrity sha512-sWZlbEP2OsHNkXrMl5GYk/jKk70MBng6UU4YI/qGDYbgf6YbP4EvmqISbXCoJiRKs+1bSpFHVgQxvJ17F2li5g==
@@ -8216,13 +8143,6 @@ merge-descriptors@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/merge-descriptors/-/merge-descriptors-1.0.1.tgz#b00aaa556dd8b44568150ec9d1b953f3f90cbb61"
   integrity sha1-sAqqVW3YtEVoFQ7J0blT8/kMu2E=
-
-merge-source-map@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/merge-source-map/-/merge-source-map-1.1.0.tgz#2fdde7e6020939f70906a68f2d7ae685e4c8c646"
-  integrity sha512-Qkcp7P2ygktpMPh2mCQZaf3jhN6D3Z/qVZHSdWvQ+2Ef5HgRAPBO57A77+ENm0CPx2+1Ce/MYKi3ymqdfuqibw==
-  dependencies:
-    source-map "^0.6.1"
 
 merge-stream@^2.0.0:
   version "2.0.0"
@@ -10078,11 +9998,6 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier@^1.18.2:
-  version "1.19.1"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.19.1.tgz#f7d7f5ff8a9cd872a7be4ca142095956a60797cb"
-  integrity sha512-s7PoyDv/II1ObgQunCbB9PdLmUcBZcnWOcxDh7O0N/UwDEsHyqkW+Qh28jW+mVuCdx7gLB0BotYI1Y6uI9iyew==
-
 prettier@^2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.0.5.tgz#d6d56282455243f2f92cc1716692c08aa31522d4"
@@ -10285,7 +10200,7 @@ querystringify@^2.1.1:
   resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.1.1.tgz#60e5a5fd64a7f8bfa4d2ab2ed6fdf4c85bad154e"
   integrity sha512-w7fLxIRCRT7U8Qu53jQnJyPkYZIaR4n5151KMfcJlO/A9397Wxb1amJvROTK6TOnp7PfoAmg/qXiNHI+08jRfA==
 
-randombytes@^2.0.0, randombytes@^2.0.1, randombytes@^2.0.5, randombytes@^2.1.0:
+randombytes@^2.0.0, randombytes@^2.0.1, randombytes@^2.0.5:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/randombytes/-/randombytes-2.1.0.tgz#df6f84372f0270dc65cdf6291349ab7a473d4f2a"
   integrity sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==
@@ -11029,13 +10944,6 @@ serialize-javascript@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/serialize-javascript/-/serialize-javascript-3.0.0.tgz#492e489a2d77b7b804ad391a5f5d97870952548e"
   integrity sha512-skZcHYw2vEX4bw90nAr2iTTsz6x2SrHEnfxgKYmZlvJYBEZrvbKtobJWlQ20zczKb3bsHHXXTYt48zBA7ni9cw==
-
-serialize-javascript@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/serialize-javascript/-/serialize-javascript-4.0.0.tgz#b525e1238489a5ecfc42afacc3fe99e666f4b1aa"
-  integrity sha512-GaNA54380uFefWghODBWEGisLZFj00nS5ACs6yHa9nLqlLpVLO8ChDGeKRjZnV4Nh4n0Qi7nhYZD/9fCPzEqkw==
-  dependencies:
-    randombytes "^2.1.0"
 
 serve-index@^1.9.1:
   version "1.9.1"
@@ -11865,11 +11773,6 @@ throat@^5.0.0:
   resolved "https://registry.yarnpkg.com/throat/-/throat-5.0.0.tgz#c5199235803aad18754a667d659b5e72ce16764b"
   integrity sha512-fcwX4mndzpLQKBS1DVYhGAcYaYt7vsHNIvQV+WXMvnow5cgjPphq5CaayLaGsjRdSCKZFNGt7/GYAuXaNOiYCA==
 
-throttle-debounce@^2.1.0:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/throttle-debounce/-/throttle-debounce-2.2.1.tgz#fbd933ae6793448816f7d5b3cae259d464c98137"
-  integrity sha512-i9hAVld1f+woAiyNGqWelpDD5W1tpMroL3NofTz9xzwq6acWBlO2dC8k5EFSZepU6oOINtV5Q3aSPoRg7o4+fA==
-
 through2@^2.0.0:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/through2/-/through2-2.0.5.tgz#01c1e39eb31d07cb7d03a96a70823260b23132cd"
@@ -12054,7 +11957,7 @@ tslib@^1.10.0, tslib@^1.11.1, tslib@^1.8.1, tslib@^1.9.0, tslib@^1.9.3:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.13.0.tgz#c881e13cc7015894ed914862d276436fa9a47043"
   integrity sha512-i/6DQjL8Xf3be4K/E6Wgpekn5Qasl1usyw++dAA35Ue5orEn65VIxOA+YvNNl9HV3qv70T7CNwjODHZrLwvd1Q==
 
-tslib@^2.0.0, tslib@^2.0.1, tslib@~2.0.0:
+tslib@^2.0.0, tslib@~2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.0.1.tgz#410eb0d113e5b6356490eec749603725b021b43e"
   integrity sha512-SgIkNheinmEBgx1IUNirK0TUD4X9yjjBRTqqjggWCU3pUEqIk3/Uwl3yRixYKT6WjQuGiwDv4NomL3wqRCj+CQ==
@@ -12409,49 +12312,6 @@ vm-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
 
-vue-apollo@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/vue-apollo/-/vue-apollo-3.0.4.tgz#d48a990d02c1febb5248d097f921c74c50a22e8a"
-  integrity sha512-sthSS9E6FB7OMmSJmIG7e89QZvzwK/1PCD8A/IfGBST48pxY7sdSxRp22Gu2/s/gxQBnQPI1H1ZPZE97IG+zXA==
-  dependencies:
-    chalk "^2.4.2"
-    serialize-javascript "^4.0.0"
-    throttle-debounce "^2.1.0"
-
-vue-demi@latest:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.1.4.tgz#640207ebc8244cd994ddc06c86ad3bfc16b4b7f4"
-  integrity sha512-8Hu4A9jLGK+SIIetMamf81eT2m9QUsiPaXSkiDTuPo9qEhSt56OCH/X+kmmg5Pg6kfzdTzKvvjlDBKWd41A7pg==
-
-vue-hot-reload-api@^2.3.0:
-  version "2.3.4"
-  resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.4.tgz#532955cc1eb208a3d990b3a9f9a70574657e08f2"
-  integrity sha512-BXq3jwIagosjgNVae6tkHzzIk6a8MHFtzAdwhnV5VlvPTFxDCvIttgSiHWjdGoTJvXtmRu5HacExfdarRcFhog==
-
-vue-loader@^15.9.3:
-  version "15.9.3"
-  resolved "https://registry.yarnpkg.com/vue-loader/-/vue-loader-15.9.3.tgz#0de35d9e555d3ed53969516cac5ce25531299dda"
-  integrity sha512-Y67VnGGgVLH5Voostx8JBZgPQTlDQeOVBLOEsjc2cXbCYBKexSKEpOA56x0YZofoDOTszrLnIShyOX1p9uCEHA==
-  dependencies:
-    "@vue/component-compiler-utils" "^3.1.0"
-    hash-sum "^1.0.2"
-    loader-utils "^1.1.0"
-    vue-hot-reload-api "^2.3.0"
-    vue-style-loader "^4.1.0"
-
-vue-router@^3.3.4:
-  version "3.4.3"
-  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.4.3.tgz#fa93768616ee338aa174f160ac965167fa572ffa"
-  integrity sha512-BADg1mjGWX18Dpmy6bOGzGNnk7B/ZA0RxuA6qedY/YJwirMfKXIDzcccmHbQI0A6k5PzMdMloc0ElHfyOoX35A==
-
-vue-style-loader@^4.1.0:
-  version "4.1.2"
-  resolved "https://registry.yarnpkg.com/vue-style-loader/-/vue-style-loader-4.1.2.tgz#dedf349806f25ceb4e64f3ad7c0a44fba735fcf8"
-  integrity sha512-0ip8ge6Gzz/Bk0iHovU9XAUQaFt/G2B61bnWa2tCcqqdgfHs1lF9xXorFbE55Gmy92okFT+8bfmySuUOu13vxQ==
-  dependencies:
-    hash-sum "^1.0.2"
-    loader-utils "^1.0.2"
-
 vue-template-compiler@^2.6.11:
   version "2.6.11"
   resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.6.11.tgz#c04704ef8f498b153130018993e56309d4698080"
@@ -12459,16 +12319,6 @@ vue-template-compiler@^2.6.11:
   dependencies:
     de-indent "^1.0.2"
     he "^1.1.0"
-
-vue-template-es2015-compiler@^1.9.0:
-  version "1.9.1"
-  resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
-  integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
-
-vue@^2.6.11:
-  version "2.6.11"
-  resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.11.tgz#76594d877d4b12234406e84e35275c6d514125c5"
-  integrity sha512-VfPwgcGABbGAue9+sfrD4PuwFar7gPb1yl1UK1MwXoQPAw0BKSqWfoYCT/ThFrdEVWoI51dBuyCoiNU9bZDZxQ==
 
 w3c-hr-time@^1.0.2:
   version "1.0.2"

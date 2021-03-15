@@ -1,4 +1,4 @@
-import { useCurrentUser } from '@/react/hooks/currentUser'
+import { useCurrentUser } from '@/src/hooks/currentUser'
 import React, { useState, useEffect } from 'react'
 import { TwCard, TwInput, TwButton } from '../components/presentational/Tw'
 import { useSayMutation, useOnMessageAddedSubscription } from '../graphql'

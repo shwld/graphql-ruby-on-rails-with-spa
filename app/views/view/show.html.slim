@@ -9,8 +9,4 @@ html
     = stylesheet_pack_tag 'application'
     javascript:
       window.SENTRY_DSN = "#{ ENV['SENTRY_DSN'] }"
-    = javascript_pack_tag 'react_application'
-    = stylesheet_pack_tag 'react_application'
-    = javascript_pack_tag 'vue_application'
-    = stylesheet_pack_tag 'vue_application'
-  body.flex.justify-between
+  body.flex.justify-center
