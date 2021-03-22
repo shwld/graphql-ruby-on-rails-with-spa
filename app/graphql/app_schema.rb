@@ -14,6 +14,10 @@ class AppSchema < GraphQL::Schema
 
   use GraphQL::Batch
 
+  def self.unauthorized_object(error)
+    raise GraphQL::ExecutionError, "An object of type #{error.type.graphql_name} was hidden due to permissions"
+  end
+
   rescue_from(ActiveRecord::RecordNotFound) do |error|
     raise GraphQL::ExecutionError.new 'RECORD_NOT_FOUND',
                                       extensions: {
