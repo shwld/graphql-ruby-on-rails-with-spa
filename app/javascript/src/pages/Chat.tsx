@@ -1,5 +1,6 @@
 import { useCurrentUser } from '@/src/hooks/currentUser'
 import React, { useState, useEffect } from 'react'
+import { FullErrorMessage } from '../components/ErrorMessage'
 import {
   Card,
   Input,
@@ -45,10 +46,10 @@ export const Chat: React.FC<Props> = () => {
               defaultValue={text}
               onChange={(e) => setText(e.target.value)}
             />
+            <FullErrorMessage error={error} />
             <Button className="w-full mt-3" disabled={loading}>
               Submit
             </Button>
-            {error && <span>{{ error }}</span>}
           </Card>
         </form>
         <div className="mt-5">
