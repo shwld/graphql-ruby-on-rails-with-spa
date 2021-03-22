@@ -22,7 +22,6 @@ services:
     environment:
       - LANG=C.UTF-8
       - BUNDLE_PATH=vendor/bundle
-      - RAILS_ENV=development
       - WEBPACKER_DEV_SERVER_HOST=webpacker
       - WEBPACKER_DEV_SERVER_PUBLIC=webpacker:3035
       - FIXTURE_PATH=db/fixtures/dev
@@ -57,7 +56,6 @@ services:
     environment:
       LANG: C.UTF-8
       BUNDLE_PATH: vendor/bundle
-      RAILS_ENV: development
       WEBPACKER_DEV_SERVER_HOST: 0.0.0.0
       WEBPACKER_DEV_SERVER_PUBLIC: 0.0.0.0:3035
   redis:
@@ -73,8 +71,6 @@ services:
     environment:
       - LANG=C.UTF-8
       - BUNDLE_PATH=vendor/bundle
-      - RAILS_ENV=test
-      - FIXTURE_PATH=db/fixtures/dev
     ports: []
 
 volumes:

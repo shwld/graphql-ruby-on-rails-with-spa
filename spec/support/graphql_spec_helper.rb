@@ -14,7 +14,7 @@ module GraphqlSpecHelper
       }
     }
     let(:variables) { {} }
-    let(:current_user) { User.find('720b95f3-4ec2-4eee-9801-b4ca3802e3b8') }
+    let(:current_user) { create(:user) }
     let(:user_signed_in) { current_user.present? }
     subject(:response) {
       res = schema.execute(
