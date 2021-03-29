@@ -1,5 +1,5 @@
 module GraphqlSpecHelper
-  shared_context 'Graphql' do
+  shared_context "Graphql" do
     let(:schema) { AppSchema }
     let(:context) {
       {
@@ -23,15 +23,15 @@ module GraphqlSpecHelper
         variables: variables,
       )
       # Print any errors
-      if res['errors']
-        puts res
+      if res["errors"]
+        puts res["errors"].inspect
       end
       res.with_indifferent_access
     }
 
     shared_examples :need_authorization do |operation_name|
       let(:context) { user_signed_out_context }
-      it 'should result is null' do
+      it "should result is null" do
         expect(response[:errors]).to be_blank
         expect(response[:data][operation_name.to_s.camelize(:lower).to_sym]).to be_nil
       end
@@ -40,5 +40,5 @@ module GraphqlSpecHelper
 end
 
 RSpec.configure do |config|
-  config.include_context 'Graphql', :graphql
+  config.include_context "Graphql", :graphql
 end
