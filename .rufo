@@ -2,4 +2,3 @@ align_case_when true
 align_chained_calls true
 parens_in_def :yes
 trailing_commas true
-quote_style :single

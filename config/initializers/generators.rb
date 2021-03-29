@@ -3,6 +3,7 @@ Rails.application.config.generators do |g|
   g.javascripts false
   g.stylesheets false
   g.helper false
+  g.system_tests false
   g.test_framework :rspec,
     fixtures: true,
     view_specs: false,
@@ -11,5 +12,5 @@ Rails.application.config.generators do |g|
     routing_specs: false,
     controller_specs: false,
     model_specs: false
-  g.fixture_replacement :factory_bot, dir: 'spec/factories'
+  g.fixture_replacement :factory_bot, dir: "spec/factories"
 end
