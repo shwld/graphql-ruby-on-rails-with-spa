@@ -103,7 +103,7 @@ GEM
       i18n (>= 1.6, < 2)
     faraday (1.0.1)
       multipart-post (>= 1.2, < 3)
-    ffi (1.12.2)
+    ffi (1.15.0)
     formatador (0.2.5)
     gimei (0.5.1)
       romaji
@@ -139,7 +139,7 @@ GEM
       actionmailer (>= 3.2)
       letter_opener (~> 1.0)
       railties (>= 3.2)
-    listen (3.2.1)
+    listen (3.5.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     loofah (2.9.0)
@@ -331,7 +331,7 @@ DEPENDENCIES
   guard-rspec
   letter_opener
   letter_opener_web
-  listen (~> 3.2)
+  listen (~> 3.5)
   pg (>= 0.18, < 2.0)
   pry-byebug
   pry-rails
