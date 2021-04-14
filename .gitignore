@@ -40,3 +40,4 @@ yarn-debug.log*
 .env
 
 .idea
+docker-compose.override.yml
