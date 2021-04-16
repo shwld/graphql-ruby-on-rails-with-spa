@@ -4,11 +4,11 @@ require 'uri'
 module FirebaseAuthorizable
   extend ActiveSupport::Concern
 
-  def set_raven_context
+  def set_sentry_context
     if firebase_user_signed_in?
-      Raven.user_context(id: current_firebase_user.id)
+      Sentry.set_user(id: current_firebase_user.id)
     end
-    Raven.extra_context(params: params.to_unsafe_h, url: request.url)
+    Sentry.set_extras(params: params.to_unsafe_h, url: request.url)
   end
 
   private
