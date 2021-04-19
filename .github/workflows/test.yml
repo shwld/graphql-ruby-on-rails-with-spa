@@ -1,4 +1,4 @@
-name: rspec
+name: test
 
 on: [push]
 
@@ -25,10 +25,25 @@ jobs:
         run: |
           gem install bundler
           bundle install --quiet --jobs 4 --retry 3
+      - name: Set up node and yarn
+        run: |
+          curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+          echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+          curl -sL https://deb.nodesource.com/setup_12.x | bash -
+          apt install -y nodejs yarn
+          yarn install
       - name: Prepare database
         run: |
           bin/rails db:create
           bin/rails db:schema:load
           bin/rails db:seed_fu
-      - name: Run test
+      - name: Run rspec
         run: rspec
+      - name: Run jsspec
+        run: yarn jest --ci
+      - name: Run tsc
+        run: yarn tsc
+      - name: Run lint
+        run: yarn eslint
+
+
