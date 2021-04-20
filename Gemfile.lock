@@ -65,6 +65,9 @@ GEM
     annotate (3.1.1)
       activerecord (>= 3.2, < 7.0)
       rake (>= 10.4, < 14.0)
+    apollo_upload_server (2.0.5)
+      actionpack (>= 4.2)
+      graphql (>= 1.8)
     bcrypt (3.1.16)
     better_errors (2.9.1)
       coderay (>= 1.0.0)
@@ -328,6 +331,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
+  apollo_upload_server (~> 2.0)
   better_errors
   binding_of_caller
   bootsnap (>= 1.4.2)

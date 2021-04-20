@@ -1,6 +1,5 @@
 import {
   ApolloClient,
-  createHttpLink,
   InMemoryCache,
   ApolloLink,
   Operation,
@@ -10,6 +9,7 @@ import { onError } from '@apollo/client/link/error'
 import Rails from '@rails/ujs'
 import * as Sentry from '@sentry/browser'
 import ActionCable from 'actioncable'
+import { createUploadLink } from 'apollo-upload-client'
 import { ActionCableLink } from './actionCableLink'
 
 const cable = ActionCable.createConsumer()
@@ -55,7 +55,7 @@ const link = ApolloLink.split(
     )
   },
   new ActionCableLink({ cable }),
-  createHttpLink({
+  createUploadLink({
     uri: GRAPHQL_BASE_URL,
   })
 )
