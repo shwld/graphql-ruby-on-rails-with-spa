@@ -1,0 +1,153 @@
+version: 2
+updates:
+- package-ecosystem: bundler
+  directory: "/"
+  schedule:
+    interval: weekly
+    time: "20:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: puma
+    versions:
+    - 5.1.1
+    - 5.2.0
+    - 5.2.1
+    - 5.2.2
+  - dependency-name: sidekiq
+    versions:
+    - 6.1.3
+    - 6.2.0
+    - 6.2.1
+  - dependency-name: listen
+    versions:
+    - 3.5.0
+    - 3.5.1
+  - dependency-name: sentry-raven
+    versions:
+    - 3.1.1
+    - 3.1.2
+  - dependency-name: bootsnap
+    versions:
+    - 1.7.3
+  - dependency-name: faker
+    versions:
+    - 2.15.1
+    - 2.16.0
+    - 2.17.0
+  - dependency-name: devise-i18n
+    versions:
+    - 1.9.2
+    - 1.9.3
+  - dependency-name: better_errors
+    versions:
+    - 2.9.1
+  - dependency-name: spring
+    versions:
+    - 2.1.1
+  - dependency-name: devise
+    versions:
+    - 4.7.3
+  - dependency-name: rails-erd
+    versions:
+    - 1.6.1
+  - dependency-name: graphql
+    versions:
+    - 1.12.1
+    - 1.12.3
+    - 1.12.4
+    - 1.12.5
+    - 1.12.6
+  - dependency-name: nokogiri
+    versions:
+    - 1.11.1
+    - 1.11.2
+  - dependency-name: rails
+    versions:
+    - 6.1.1
+    - 6.1.2.1
+    - 6.1.3
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "20:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: "@sentry/react"
+    versions:
+    - 6.0.2
+    - 6.0.3
+    - 6.0.4
+    - 6.1.0
+    - 6.2.0
+    - 6.2.1
+    - 6.2.2
+    - 6.2.3
+    - 6.2.4
+    - 6.2.5
+    - 6.3.0
+    - 6.3.1
+  - dependency-name: fork-ts-checker-webpack-plugin
+    versions:
+    - 6.2.1
+    - 6.2.2
+    - 6.2.4
+  - dependency-name: "@rails/webpacker"
+    versions:
+    - 5.2.1
+  - dependency-name: "@sentry/integrations"
+    versions:
+    - 6.2.5
+  - dependency-name: "@testing-library/react"
+    versions:
+    - 11.2.6
+  - dependency-name: eslint-plugin-jsdoc
+    versions:
+    - 32.3.0
+  - dependency-name: node-fetch
+    versions:
+    - 2.6.1
+  - dependency-name: "@graphql-codegen/introspection"
+    versions:
+    - 1.18.1
+  - dependency-name: "@typescript-eslint/eslint-plugin"
+    versions:
+    - 4.0.0
+  - dependency-name: "@sentry/browser"
+    versions:
+    - 6.0.2
+    - 6.0.3
+    - 6.0.4
+    - 6.1.0
+    - 6.2.0
+    - 6.2.1
+    - 6.2.2
+    - 6.2.3
+    - 6.2.4
+    - 6.2.5
+  - dependency-name: y18n
+    versions:
+    - 4.0.1
+  - dependency-name: tailwindcss
+    versions:
+    - 1.9.6
+  - dependency-name: "@typescript-eslint/parser"
+    versions:
+    - 3.10.1
+  - dependency-name: "@vue/composition-api"
+    versions:
+    - 1.0.0-rc.1
+    - 1.0.0-rc.2
+    - 1.0.0-rc.3
+    - 1.0.0-rc.5
+  - dependency-name: node-notifier
+    versions:
+    - 8.0.1
+    - 8.0.2
+  - dependency-name: "@graphql-codegen/typescript-vue-apollo"
+    versions:
+    - 2.3.1
+    - 2.3.2
+  - dependency-name: elliptic
+    versions:
+    - 6.5.3
