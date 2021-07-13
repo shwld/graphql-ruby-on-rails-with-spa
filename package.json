@@ -7,7 +7,7 @@
     "@graphql-codegen/cli": "^1.17.4",
     "@graphql-codegen/introspection": "^1.18.1",
     "@graphql-codegen/typescript": "^1.17.4",
-    "@graphql-codegen/typescript-operations": "^1.17.4",
+    "@graphql-codegen/typescript-operations": "^1.18.4",
     "@graphql-codegen/typescript-react-apollo": "^2.0.0",
     "@rails/activestorage": "^6.0.3-1",
     "@rails/ujs": "^6.0.3-1",
