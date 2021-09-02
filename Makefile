@@ -15,6 +15,10 @@ up:
 up-verbose:
 	docker-compose up
 
+.PHONY: attach
+attach:
+	docker attach ${app_name}
+
 .PHONY: down
 down:
 	docker-compose down
