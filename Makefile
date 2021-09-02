@@ -11,6 +11,10 @@ up:
 	docker-compose up -d
 	docker attach ${app_name}
 
+.PHONY: up-verbose
+up-verbose:
+	docker-compose up
+
 .PHONY: down
 down:
 	docker-compose down
@@ -27,6 +31,10 @@ migrate:
 seed:
 	docker-compose run --rm app bundle exec rails db:seed_fu
 
+.PHONY: generate
+generate:
+	docker-compose run --rm app yarn generate --watch "app/javascript/graphql/**"
+
 .PHONY: reset-test
 reset-test:
 	docker-compose run --rm -e RAILS_ENV=test app bundle exec rails db:reset
@@ -38,3 +46,7 @@ test-all:
 .PHONY: test
 test:
 	docker-compose run --rm test bundle exec guard --no-bundler-warning --no-interactions
+
+.PHONY: jest
+jest:
+	docker-compose run --rm test yarn test

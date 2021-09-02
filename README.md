@@ -23,15 +23,35 @@ more
 
 ```
 docker-compose build
+docker-compose run --rm app yarn
 docker-compose run --rm app bin/setup
 ```
 
-## VSCode
+## Server start
 
 ```
-code --install-extension ms-vscode-remote.vscode-remote-extensionpack
+make up
 ```
 
-Open folder in container
+## Graphql types generate
 
-![remote development](./docs/images/vscode1.png)
+```
+make generate
+```
+
+## Database
+
+```
+make migrate
+make seed
+```
+
+see Makefile
+
+## Test
+
+```
+make test
+make test-all
+make jest
+```
