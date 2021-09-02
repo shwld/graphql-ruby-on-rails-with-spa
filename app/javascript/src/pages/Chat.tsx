@@ -1,5 +1,5 @@
-import { useCurrentUser } from '@/src/hooks/currentUser'
 import React, { useState, useEffect } from 'react'
+
 import { FullErrorMessage } from '../components/ErrorMessage'
 import {
   Card,
@@ -8,7 +8,9 @@ import {
 } from '../components/presentational/TailwindComponents'
 import { useSayMutation, useOnMessageAddedSubscription } from '../graphql'
 
-type Props = {}
+import { useCurrentUser } from '@/src/hooks/currentUser'
+
+type Props = object
 
 export const Chat: React.FC<Props> = () => {
   const [text, setText] = useState<string>('')

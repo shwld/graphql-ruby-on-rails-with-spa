@@ -15,9 +15,9 @@ export const ErrorMessage: React.FC<{
   const errors = recordInvalidErrors
     .map(
       (it) =>
-        (it.extensions?.record?.errors as Array<{
+        (it.extensions?.record?.errors as {
           [columnName: string]: string[]
-        }>) || []
+        }[]) || []
     )
     .flat()
   return (

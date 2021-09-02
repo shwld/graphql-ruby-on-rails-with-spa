@@ -1,8 +1,9 @@
-import { useCurrentUser } from '@/src/hooks/currentUser'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-type Props = {}
+import { useCurrentUser } from '@/src/hooks/currentUser'
+
+type Props = object
 
 // type State = {}
 
