@@ -2,7 +2,6 @@ module.exports = {
   preset: 'ts-jest',
   roots: ['<rootDir>/app/javascript'],
   setupFilesAfterEnv: ['<rootDir>/jest/setupTests.ts'],
-  testEnvironment: 'jest-environment-jsdom-sixteen',
   testPathIgnorePatterns: ['<rootDir>/node_modules/'],
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
