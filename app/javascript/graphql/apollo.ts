@@ -7,7 +7,7 @@ import {
 import { setContext } from '@apollo/client/link/context'
 import { onError } from '@apollo/client/link/error'
 import Rails from '@rails/ujs'
-import * as Sentry from '@sentry/browser'
+import * as Sentry from '@sentry/react'
 import ActionCable from 'actioncable'
 import { createUploadLink } from 'apollo-upload-client'
 import { ActionCableLink } from './actionCableLink'
