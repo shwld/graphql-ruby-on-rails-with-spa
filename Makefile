@@ -39,6 +39,10 @@ seed:
 generate:
 	docker-compose run --rm app yarn generate --watch "app/javascript/graphql/**"
 
+.PHONY: new-component
+new-component:
+	docker-compose run --rm app yarn hygen fc new
+
 .PHONY: reset-test
 reset-test:
 	docker-compose run --rm -e RAILS_ENV=test app bundle exec rails db:reset
