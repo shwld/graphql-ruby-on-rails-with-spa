@@ -51,6 +51,8 @@
     "check": "lint;tsc"
   },
   "devDependencies": {
+    "@swc/core": "^1.2.84",
+    "@swc/jest": "^0.2.2",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@testing-library/react-hooks": "^7.0.2",

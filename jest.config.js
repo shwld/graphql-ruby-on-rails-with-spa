@@ -1,10 +1,10 @@
 module.exports = {
   preset: 'ts-jest',
   roots: ['<rootDir>/app/javascript'],
-  setupFilesAfterEnv: ['<rootDir>/app/javascript/jest/setupTests.ts'],
+  setupFilesAfterEnv: ['<rootDir>/app/javascript/jest/setupTests.js'],
   testPathIgnorePatterns: ['<rootDir>/node_modules/'],
   transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',
+    '^.+\\.(ts|tsx)$': '@swc/jest',
   },
   moduleNameMapper: {
     '^@/(.*)': '<rootDir>/app/javascript/$1',
