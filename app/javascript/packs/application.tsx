@@ -1,11 +1,12 @@
 import '@/styles/application.sass'
-import { App } from '@/src/App'
 import * as ActiveStorage from '@rails/activestorage'
 import Rails from '@rails/ujs'
 import * as Sentry from '@sentry/react'
 import { Integrations } from '@sentry/tracing'
 import React from 'react'
 import ReactDOM from 'react-dom'
+
+import { App } from '@/src/App'
 
 Rails.start()
 ActiveStorage.start()

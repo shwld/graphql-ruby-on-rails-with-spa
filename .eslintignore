@@ -1,2 +1,2 @@
 *.js
-graphql.ts?
+app/javascript/graphql/generated*.ts?

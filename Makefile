@@ -58,3 +58,7 @@ test:
 .PHONY: jest
 jest:
 	docker-compose run --rm test yarn test
+
+.PHONY: lint
+lint:
+	docker-compose run --rm test yarn check

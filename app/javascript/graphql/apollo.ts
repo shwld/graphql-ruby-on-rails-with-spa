@@ -10,6 +10,7 @@ import Rails from '@rails/ujs'
 import * as Sentry from '@sentry/react'
 import ActionCable from 'actioncable'
 import { createUploadLink } from 'apollo-upload-client'
+
 import { ActionCableLink } from './actionCableLink'
 
 const cable = ActionCable.createConsumer()

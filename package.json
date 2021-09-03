@@ -45,7 +45,10 @@
   },
   "scripts": {
     "generate": "graphql-codegen --config codegen.yml",
-    "test": "jest --watchAll --maxWorkers=2"
+    "tsc": "tsc --project tsconfig.json",
+    "lint": "eslint app/javascript",
+    "test": "jest --watchAll --maxWorkers=2",
+    "check": "lint;tsc"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.14.1",
