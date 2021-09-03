@@ -61,3 +61,9 @@ make test
 make test-all
 make jest
 ```
+
+## Generate component
+
+```
+make new-component
+```
