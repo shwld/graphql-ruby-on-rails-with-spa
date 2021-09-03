@@ -21,6 +21,6 @@
     "strict": true,
     "target": "es5"
   },
-  "exclude": ["**/*.spec.ts", "node_modules", "vendor", "public"],
+  "exclude": ["node_modules", "vendor", "public"],
   "compileOnSave": false
 }
