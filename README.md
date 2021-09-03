@@ -33,6 +33,12 @@ docker-compose run --rm app bin/setup
 make up
 ```
 
+or 
+
+```
+make up-verbose
+```
+
 ## Graphql types generate
 
 ```
@@ -54,4 +60,10 @@ see Makefile
 make test
 make test-all
 make jest
+```
+
+## Generate component
+
+```
+make new-component
 ```
