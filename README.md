@@ -33,6 +33,12 @@ docker-compose run --rm app bin/setup
 make up
 ```
 
+or 
+
+```
+make up-verbose
+```
+
 ## Graphql types generate
 
 ```
