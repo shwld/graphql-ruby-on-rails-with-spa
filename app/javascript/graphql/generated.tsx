@@ -135,6 +135,11 @@ export type UserEdge = {
   node?: Maybe<User>;
 };
 
+export type UserItemFragment = (
+  { __typename?: 'User' }
+  & Pick<User, 'id' | 'email'>
+);
+
 export type SayMutationVariables = Exact<{
   input: SayInput;
 }>;
@@ -155,7 +160,7 @@ export type CurrentUserQuery = (
   { __typename?: 'Query' }
   & { currentUser?: Maybe<(
     { __typename?: 'User' }
-    & Pick<User, 'id' | 'email'>
+    & UserItemFragment
   )> }
 );
 
@@ -170,7 +175,12 @@ export type OnMessageAddedSubscription = (
   ) }
 );
 
-
+export const UserItemFragmentDoc = gql`
+    fragment UserItem on User {
+  id
+  email
+}
+    `;
 export const SayDocument = gql`
     mutation say($input: SayInput!) {
   say(input: $input) {
@@ -207,11 +217,10 @@ export type SayMutationOptions = Apollo.BaseMutationOptions<SayMutation, SayMuta
 export const CurrentUserDocument = gql`
     query currentUser {
   currentUser {
-    id
-    email
+    ...UserItem
   }
 }
-    `;
+    ${UserItemFragmentDoc}`;
 
 /**
  * __useCurrentUserQuery__

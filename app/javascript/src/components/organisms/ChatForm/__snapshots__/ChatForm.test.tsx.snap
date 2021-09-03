@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Organisms/ChatForm Snap Shot 1`] = `
+<form
+  className=""
+  onSubmit={[Function]}
+>
+  <div
+    className="max-w-sm rounded overflow-hidden shadow-lg "
+  >
+    <div
+      className="px-6 py-4"
+    >
+      <p
+        className="pt-10"
+      >
+        Say!
+      </p>
+      <input
+        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline "
+        defaultValue=""
+        onChange={[Function]}
+      />
+      <button
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full mt-3"
+      >
+        Submit
+      </button>
+    </div>
+  </div>
+</form>
+`;

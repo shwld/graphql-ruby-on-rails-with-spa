@@ -2,13 +2,13 @@
 to: <%= absPath %>/<%= componentName %>.tsx
 force: true
 ---
-import { VFC, ReactNode } from 'react'
+import React from 'react'
 <% if (haveHooks) { -%>
 import { useDependencies } from './dependencies'
 <% } -%>
 
 type Props = {
-//  children?: ReactNode
+//  children?: React.ReactNode
 }
 
 export const <%= componentName %>: <%- typeAnnotate %> = <%= props %> => {

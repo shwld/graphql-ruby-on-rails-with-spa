@@ -3,7 +3,7 @@ schema: 'http://app:3000/schema'
 documents:
   - ./app/javascript/graphql/**/*.graphql
 generates:
-  app/javascript/src/graphql.tsx:
+  app/javascript/graphql/generated.tsx:
     plugins:
       - typescript
       - typescript-operations

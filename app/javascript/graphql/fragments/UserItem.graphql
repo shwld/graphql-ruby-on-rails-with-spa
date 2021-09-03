@@ -1,0 +1,4 @@
+fragment UserItem on User {
+  id
+  email
+}

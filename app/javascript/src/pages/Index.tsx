@@ -3,11 +3,7 @@ import { Link } from 'react-router-dom'
 
 import { useCurrentUser } from '@/src/hooks/currentUser'
 
-type Props = object
-
-// type State = {}
-
-export const Index: React.FC<Props> = () => {
+export function Index() {
   const { currentUser } = useCurrentUser()
   if (!currentUser) return <></>
   return (

@@ -1,4 +1,4 @@
-import { useCurrentUserQuery } from '../graphql'
+import { useCurrentUserQuery } from '@/graphql/generated'
 
 export const useCurrentUser = () => {
   const { data, loading } = useCurrentUserQuery()

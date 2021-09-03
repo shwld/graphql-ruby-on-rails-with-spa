@@ -44,8 +44,8 @@
     "webpack-dev-server": "^3.11.0"
   },
   "scripts": {
-    "generate": "graphql-codegen --config codegen.yml --silent",
-    "test": "jest --watchAll"
+    "generate": "graphql-codegen --config codegen.yml",
+    "test": "jest --watchAll --maxWorkers=2"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.14.1",

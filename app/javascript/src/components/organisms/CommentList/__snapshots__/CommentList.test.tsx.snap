@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Organisms/CommentList Snap Shot 1`] = `
+<div
+  className=""
+>
+  <p>
+    message
+  </p>
+</div>
+`;

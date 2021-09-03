@@ -1,14 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+import { UserItemFragment } from '@/graphql/generated'
 import { useCurrentUser } from '@/src/hooks/currentUser'
 
-type Props = object
-
-// type State = {}
-
-export const Menu: React.FC<Props> = ({ children }) => {
-  const { currentUser } = useCurrentUser()
+export const MenuTemplate: React.VFC<{
+  currentUser: UserItemFragment
+}> = ({ currentUser }) => {
   return (
     <>
       {currentUser && (
@@ -35,8 +33,14 @@ export const Menu: React.FC<Props> = ({ children }) => {
           </li>
         </ul>
       )}
-      {children}
       {!currentUser && <div>Please sign in</div>}
     </>
   )
+}
+
+export const Menu: React.VFC = () => {
+  const { currentUser } = useCurrentUser()
+  if (currentUser == null) return <></>
+
+  return <MenuTemplate currentUser={currentUser} />
 }

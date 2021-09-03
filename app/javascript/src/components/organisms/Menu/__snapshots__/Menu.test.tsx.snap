@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Organisms/Menu Snap Shot 1`] = `
+<ul
+  className="flex items-center justify-end p-6 bg-teal-500"
+>
+  <li
+    className="mr-6"
+  >
+    <a
+      className="text-white hover:text-yellow-800"
+      href="/chat"
+      onClick={[Function]}
+    >
+      test@example.com
+    </a>
+  </li>
+  <li>
+    <a
+      data-method="delete"
+      href="/users/sign_out"
+    >
+      Sign out
+    </a>
+  </li>
+</ul>
+`;

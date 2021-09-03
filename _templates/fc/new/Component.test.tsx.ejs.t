@@ -4,6 +4,7 @@ force: true
 ---
 import React from 'react'
 import { create } from 'react-test-renderer'
+
 import { <%= componentName %> } from './<%= componentName %>'
 
 describe('<%= category %>/<%= componentName %>', () => {

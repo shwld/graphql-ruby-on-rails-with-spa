@@ -33,7 +33,7 @@ module.exports = {
       const { category, componentName, dir, ...results } = answers
       const path = `${category}/${dir ? `${dir}/` : ``}${componentName}`
       const absPath = `app/javascript/src/components/${path}`
-      const typeAnnotate = 'VFC<Props>'
+      const typeAnnotate = 'React.VFC<Props>'
       const props = '()'
       const tag = args.tag ? args.tag : 'div'
       return {
