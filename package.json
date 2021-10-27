@@ -34,7 +34,7 @@
     "eslint-plugin-react-hooks": "^4.1.0",
     "fork-ts-checker-webpack-plugin": "^6.3.2",
     "graphql": "^15.5.2",
-    "prettier": "^2.3.2",
+    "prettier": "^2.4.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -51,6 +51,7 @@
     "check": "lint;tsc"
   },
   "devDependencies": {
+    "@prettier/plugin-ruby": "^2.0.0-rc4",
     "@swc/core": "^1.2.84",
     "@swc/jest": "^0.2.2",
     "@testing-library/jest-dom": "^5.14.1",

@@ -264,7 +264,6 @@ GEM
     ruby-graphviz (1.2.5)
       rexml
     ruby2_keywords (0.0.4)
-    rufo (0.12.0)
     seed-fu (2.3.9)
       activerecord (>= 3.1)
       activesupport (>= 3.1)
@@ -361,7 +360,6 @@ DEPENDENCIES
   rails-i18n
   rspec-rails
   rspec_junit_formatter
-  rufo
   seed-fu
   sentry-rails
   sentry-ruby
