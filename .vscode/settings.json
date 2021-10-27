@@ -21,7 +21,6 @@
   "[ruby]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
-    // "editor.defaultFormatter": "mbessey.vscode-rufo"
   },
   "files.watcherExclude": {
     "**/.git/objects/**": true,
