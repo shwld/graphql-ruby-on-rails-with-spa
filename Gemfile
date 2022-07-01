@@ -9,6 +9,7 @@ gem 'devise-i18n'
 gem 'devise'
 gem 'graphql-batch'
 gem 'graphql'
+gem 'jsbundling-rails'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma'
 gem 'pundit'
@@ -21,7 +22,6 @@ gem 'sentry-rails'
 gem 'sentry-sidekiq'
 gem 'slim-rails'
 gem 'sidekiq'
-gem 'webpacker'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
