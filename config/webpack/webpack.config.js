@@ -17,10 +17,7 @@ module.exports = {
   },
   devtool: 'source-map',
   entry: {
-    application: [
-      './app/javascript/entries/application.tsx',
-      './app/javascript/styles/application.sass',
-    ],
+    application: ['./app/javascript/entries/application.tsx'],
   },
   output: {
     filename: '[name].js',
