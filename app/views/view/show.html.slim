@@ -5,8 +5,8 @@ html
       | App
     = csrf_meta_tags
     = csp_meta_tag
-    = javascript_pack_tag 'application'
-    = stylesheet_pack_tag 'application'
+    = javascript_include_tag 'application', defer: true
+    = stylesheet_link_tag 'application', defer: true
     javascript:
       window.SENTRY_DSN = "#{ ENV['SENTRY_DSN'] }"
   body.flex.justify-center

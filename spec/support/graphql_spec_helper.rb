@@ -32,7 +32,7 @@ module GraphqlSpecHelper
     shared_examples :need_authorization do |operation_name|
       let(:context) { user_signed_out_context }
       it "should result is null" do
-        expect(response[:errors]).to be_blank
+        expect(response[:errors].first[:message]).to include 'was hidden due to permissions'
         expect(response[:data][operation_name.to_s.camelize(:lower).to_sym]).to be_nil
       end
     end
