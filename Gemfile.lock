@@ -91,6 +91,8 @@ GEM
     concurrent-ruby (1.1.10)
     connection_pool (2.2.5)
     crass (1.0.6)
+    cssbundling-rails (1.1.1)
+      railties (>= 6.0.0)
     database_rewinder (0.9.8)
     debug_inspector (1.1.0)
     devise (4.8.1)
@@ -112,6 +114,7 @@ GEM
     faker (2.21.0)
       i18n (>= 1.8.11, < 2)
     ffi (1.15.5)
+    foreman (0.87.2)
     formatador (1.1.0)
     gimei (1.1.0)
       romaji
@@ -190,6 +193,11 @@ GEM
     orm_adapter (0.5.0)
     pg (1.4.1)
     promise.rb (0.7.4)
+    propshaft (0.6.4)
+      actionpack (>= 7.0.0)
+      activesupport (>= 7.0.0)
+      rack
+      railties (>= 7.0.0)
     pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -338,11 +346,13 @@ DEPENDENCIES
   binding_of_caller
   bootsnap (>= 1.4.2)
   byebug
+  cssbundling-rails (~> 1.1)
   database_rewinder
   devise
   devise-i18n
   factory_bot_rails
   faker
+  foreman
   gimei
   graphql
   graphql-autotest
@@ -354,6 +364,7 @@ DEPENDENCIES
   letter_opener_web
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)
+  propshaft
   pry-byebug
   pry-rails
   puma
@@ -376,7 +387,7 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 RUBY VERSION
-   ruby 2.7.1p83
+   ruby 3.1.2p20
 
 BUNDLED WITH
    2.1.4
