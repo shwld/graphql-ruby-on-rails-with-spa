@@ -5,6 +5,7 @@ ruby '3.1.2'
 
 gem 'apollo_upload_server', '~> 2.0'
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'cssbundling-rails', '~> 1.1'
 gem 'devise-i18n'
 gem 'devise'
 gem 'graphql-batch'
@@ -57,5 +58,3 @@ group :development do
 end
 
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
-
-gem 'cssbundling-rails', '~> 1.1'

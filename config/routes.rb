@@ -10,7 +10,6 @@ Rails.application.routes.draw do
     mount LetterOpenerWeb::Engine, at: '/letter_opener'
   end
 
-  get '*path' => 'view#show', constraints: lambda { |req|
-    req.path.exclude? 'rails/active_storage'
-  }
+  get '*path' => 'view#show',
+      :constraints => lambda { |req| req.path.exclude? 'rails/active_storage' }
 end
