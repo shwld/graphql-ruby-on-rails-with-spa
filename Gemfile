@@ -47,7 +47,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'letter_opener'
   gem 'letter_opener_web'
-  gem 'listen', '~> 3.2'
+  gem 'listen', '~> 3.8'
   gem 'rails-erd'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'spring'
