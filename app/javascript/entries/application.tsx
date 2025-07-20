@@ -1,4 +1,3 @@
-import '@/styles/application.sass'
 import * as ActiveStorage from '@rails/activestorage'
 import Rails from '@rails/ujs'
 import * as Sentry from '@sentry/react'

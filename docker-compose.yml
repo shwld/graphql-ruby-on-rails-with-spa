@@ -3,12 +3,7 @@ version: '3'
 services:
   app: &app
     build: .
-    command:
-      [
-        '/bin/sh',
-        '-c',
-        "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'",
-      ]
+    command: ['/bin/sh', '-c', 'bin/dev']
     ports:
       - 3000:3000
     volumes:

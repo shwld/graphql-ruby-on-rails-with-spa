@@ -22,9 +22,9 @@ more
 ## Install
 
 ```
-docker-compose build
+cp .env.example .env
+docker-compose setup
 docker-compose run --rm app yarn
-docker-compose run --rm app bin/setup
 ```
 
 ## Server start
@@ -33,7 +33,7 @@ docker-compose run --rm app bin/setup
 make up
 ```
 
-or 
+or
 
 ```
 make up-verbose

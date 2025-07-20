@@ -1,5 +1,5 @@
-FROM node:12 as node
-FROM ruby:2.7.1
+FROM node:16 as node
+FROM ruby:3.1.2
 
 RUN apt-get update -qq \
     && apt-get install -y --no-install-recommends \
